@@ -30,6 +30,10 @@ public abstract class KeyboardHandlerMixin {
             int modifiers,
             CallbackInfo ci
     ) {
+        if (CreateOdditiesClient.handleFullscreenKey(windowHandle, key, action)) {
+            ci.cancel();
+            return;
+        }
         if (CreateOdditiesClient.shouldCapture(windowHandle, key)) {
             CreateOdditiesClient.forwardToTypewriter(key, scanCode, action, modifiers);
             ci.cancel();

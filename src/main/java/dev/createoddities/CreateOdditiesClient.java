@@ -28,6 +28,8 @@ public final class CreateOdditiesClient {
     private static final int GLFW_KEY_F2 = 291;
     /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
     private static final int GLFW_KEY_F11 = 292;
+    /** GLFW_PRESS - only toggle fullscreen on the initial press, not on release/repeat. */
+    private static final int GLFW_PRESS = 1;
 
     private static boolean resolutionAttempted;
     private static Method getModeMethod;
@@ -38,15 +40,38 @@ public final class CreateOdditiesClient {
     }
 
     public static boolean shouldCapture(long windowHandle, int key) {
+        // Let a couple of harmless window/system keys through.
+        if (key == GLFW_KEY_F2 || key == GLFW_KEY_F11) {
+            return false;
+        }
+        return isTypewriterActive(windowHandle);
+    }
+
+    /**
+     * Handles F11 while the typewriter owns the keyboard.
+     *
+     * <p>Simply letting F11 through is not enough: Simulated's own key handler
+     * can still consume it after our HEAD injection. Toggle the window here and
+     * cancel the event so fullscreen works regardless of what runs later.</p>
+     *
+     * @return true when the event was handled and must be cancelled
+     */
+    public static boolean handleFullscreenKey(long windowHandle, int key, int action) {
+        if (key != GLFW_KEY_F11 || !isTypewriterActive(windowHandle)) {
+            return false;
+        }
+        if (action == GLFW_PRESS) {
+            Minecraft.getInstance().getWindow().toggleFullScreen();
+        }
+        return true;
+    }
+
+    private static boolean isTypewriterActive(long windowHandle) {
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.player == null || minecraft.screen != null) {
             return false;
         }
         if (windowHandle != minecraft.getWindow().getWindow()) {
-            return false;
-        }
-        // Let a couple of harmless window/system keys through.
-        if (key == GLFW_KEY_F2 || key == GLFW_KEY_F11) {
             return false;
         }
         if (!resolveHandler()) {

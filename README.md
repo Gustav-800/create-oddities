@@ -28,11 +28,12 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
-| **0.1.0** | 开发中（首个 Create Oddities 版本） | 目标：模块化、配置系统、迁移已有模块。当前构建已完成更名、内部 id `create_oddities`、仅 Create 前置、Simulated 可选；模块系统与配置仍在开发 |
+| **0.1.1** | 当前开发版 | 修复打字机激活时 F11 仍被拦截；包含更名、内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
+| **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
 
-> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.0 是首个以新名字、新依赖规则开发的版本，目前尚未发布。
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 是当前开发版，尚未正式发布。
 >
-> 0.1.0 起内部 mod id 改为 `create_oddities`。它和 1.0.0 的 `every_key_a_gem` 会被加载器视为两个不同模组；升级时必须先移除旧 jar，不能同时安装。
+> 0.1.x 起内部 mod id 改为 `create_oddities`。它和 1.0.0 的 `every_key_a_gem` 会被加载器视为两个不同模组；升级时必须先移除旧 jar，不能同时安装。
 
 ## 设计原则 / Design rules
 
@@ -55,7 +56,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 模块 | 状态 | 前置 | 说明 |
 | --- | --- | --- | --- |
-| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 已迁移到 0.1.0 | Create + 可选 Simulated | 打字机激活时接管键盘，避免其他模组快捷键打断 |
+| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 已迁移到 0.1.x | Create + 可选 Simulated | 打字机激活时接管键盘，避免其他模组快捷键打断 |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道开关、生存配方、火炮装载辅助等 |
@@ -84,21 +85,21 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | Minecraft | 1.21.1 |
 | NeoForge | 21.1.228 或更高 |
 | Create | 6.0.10 或更高 |
-| 必需前置 | **仅 Create**（0.1.0 起） |
+| 必需前置 | **仅 Create**（0.1.x 起） |
 | 可选联动 | Create: Aeronautics / Simulated、Create: Crafts & Additions、Create Big Cannons、CBCAT、CBCMW |
 
-**1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。0.1.0 会把 Simulated 改为可选。
+**1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。0.1.x 已把 Simulated 改为可选。
 
 ## 配置 / Configuration
 
-0.1.0 目标：
+0.1.x 目标：
 
 - 每个模块的 `enabled` 开关；
 - 模块参数（阈值、倍率、单位、配方开关等）；
 - 与 Create 配置菜单兼容的游戏内入口；
 - 配置文件缺失或损坏时回退到安全默认值。
 
-**1.0.0 目前没有配置文件。** 打字机模块在检测到 Simulated 时启用。
+**0.1.1 目前也没有配置文件。** 打字机模块在检测到 Simulated 时启用。
 
 ## 安装 / Installation
 
@@ -109,11 +110,11 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 0.1.0（开发中）
+### 0.1.1（开发中）
 
 1. 先移除 1.0.0 的 `create-every-key-a-gem-1.0.0.jar`（内部 id 不同，不能共存）
 2. 只需要 Create；Aeronautics / Simulated 可选
-3. 把 `create-oddities-0.1.0.jar` 放进 `mods/`
+3. 把 `create-oddities-0.1.1.jar` 放进 `mods/`
 4. 完全重启游戏
 
 ## 构建 / Building

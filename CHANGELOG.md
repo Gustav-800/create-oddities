@@ -1,20 +1,27 @@
 # Changelog
 
-## Unreleased — 0.1.0 (Create Oddities, early development)
+## 0.1.1 — 2026-11-21
+
+### Fixed
+
+- F11 now toggles fullscreen while the typewriter is active. The event is handled
+  at the head of `KeyboardHandler#keyPress` and cancelled, so Simulated's later
+  handler cannot consume it.
 
 ### Changed
 
 - Project renamed to **Create Oddities / 机械动力：奇思妙想**.
 - Internal mod id changed from `every_key_a_gem` to `create_oddities`.
+- Create is now the only required mod dependency; Simulated is optional and the
+  typewriter module disables itself when Simulated is absent.
 - Scope expanded from the typewriter keyguard to a modular collection of fixes,
   tweaks, and additions for Create and its addons.
 - Added `ROADMAP.md` and updated the README with the module/config/dependency policy.
-- Create is now the only required mod dependency; Simulated is optional.
 
 ### Planned
 
-- 0.1.0: module loader, configuration system, Create-only hard dependency.
-- 0.2.0: CCA blueprint cable fix, CBCAT ballistics toggle, Aeronautics speed units.
+- 0.2.0: module loader/config, CCA blueprint cable fix, CBCAT ballistics toggle,
+  Aeronautics speed units.
 - 0.3.0: smooth transmission animation, CBCMW recipes, dynamic stress model.
 - 0.4.0: Aeronautics bearing stress, chain-powered piston.
 
