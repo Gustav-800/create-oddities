@@ -1,5 +1,7 @@
 # 发布操作手册 / Publishing guide
 
+> **历史文档**：以下流程写于 1.0.0（旧名 *Create: Every Key a Gem*）时期。项目现已更名为 **Create Oddities / 机械动力：奇思妙想**，版本从 **0.1.0** 重新开始；平台名称、版本号和 jar 文件名需按 README / ROADMAP 更新后再使用本文档。
+
 这份手册按顺序覆盖：GitHub 开源 → GitHub Release → Modrinth → MC百科。
 每一步都给出需要填写的材料和可直接复制的文案。
 
@@ -58,7 +60,7 @@ jar：`build/libs/create-every-key-a-gem-1.0.0.jar`
 你只需要在 GitHub 创建好空仓库后，在项目目录打开 PowerShell：
 
 ```powershell
-cd "D:\常用\MC模组开发\create-every-key-a-gem"
+cd "D:\常用\MC模组开发\create-oddities"
 git push -u origin main
 ```
 

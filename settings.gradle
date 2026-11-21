@@ -8,4 +8,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'create-every-key-a-gem'
+rootProject.name = 'create-oddities'
