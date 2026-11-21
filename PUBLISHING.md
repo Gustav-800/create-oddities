@@ -58,7 +58,7 @@ jar：`build/libs/create-every-key-a-gem-1.0.0.jar`
 你只需要在 GitHub 创建好空仓库后，在项目目录打开 PowerShell：
 
 ```powershell
-cd "C:\Users\Administrator\Documents\deepseek-harness\default-workspace\create-every-key-a-gem"
+cd "D:\常用\MC模组开发\create-every-key-a-gem"
 git push -u origin main
 ```
 
