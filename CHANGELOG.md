@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased — Create Oddities
+
+### Changed
+
+- Project renamed to **Create Oddities / 机械动力：奇思妙想**.
+- Scope expanded from the typewriter keyguard to a modular collection of fixes,
+  tweaks, and additions for Create and its addons.
+- Added `ROADMAP.md` and updated the README with the module/config/dependency policy.
+
+### Planned
+
+- 2.0.0: module loader, configuration system, Create-only hard dependency.
+- 2.1.0: CCA blueprint cable fix, CBCAT ballistics toggle, Aeronautics speed units.
+- 2.2.0: smooth transmission animation, CBCMW recipes, dynamic stress model.
+- 2.3.0: Aeronautics bearing stress, chain-powered piston.
+
 ## 1.0.0 — 2026-10-18
 
 ### Added

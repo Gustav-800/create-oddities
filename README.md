@@ -1,118 +1,145 @@
-# Create: Every Key a Gem
+# Create Oddities / 机械动力：奇思妙想
 
-**机械动力：字字珠玑** — a client-side keyguard for the wireless redstone typewriter in
-[Create: Aeronautics](https://modrinth.com/mod/create-aeronautics).
+**A modular companion for Create: small fixes, careful tweaks, and the occasional new machine.**
+
+**机械动力及其附属的模块化补丁与扩展：修复小问题，调整旧机制，偶尔加点新东西。**
+
+> 这个项目始于无线红石打字机的按键冲突修复。从 2.0.0 起，它以 **Create Oddities / 机械动力：奇思妙想** 的名字继续扩展。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62b47a.svg)](https://www.minecraft.net/)
 [![NeoForge](https://img.shields.io/badge/NeoForge-21.1.228%2B-f16436.svg)](https://neoforged.net/)
+[![Create](https://img.shields.io/badge/Create-6.0.10%2B-c89b5a.svg)](https://modrinth.com/mod/create)
 
-> 字字珠玑：每一个按键，都应落成你想要的信号。
+## 项目定位 / What this is
 
-## The problem / 问题
+Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合，而不是某一个附属的专属修复模组。
 
-The wireless typewriter claims the keyboard, but Simulated cleans up vanilla
-`KeyMapping` clicks only at the very end of NeoForge's `InputEvent.Key` dispatch.
-By then vanilla has already queued the key mapping, and other mods' key listeners
-may already have run. Press a key that is also another mod's shortcut and that
-mod's screen opens, which forces the typewriter to disconnect.
+它的目标包括三类内容：
 
-无线红石打字机本应接管键盘，但 Simulated 直到 `InputEvent.Key` 分发末尾才清理
-`KeyMapping`。此时原版已经排入按键，其他模组的监听器也可能已经执行——按下绑定了
-其它模组快捷键的键，就会弹出那个模组的界面，打字机随之断开。
+- **修复**：处理 Create 或附属在特定组合下出现的漏洞、数据丢失和兼容问题；
+- **调整**：在不破坏原有玩法的前提下，让某些机制更平滑、更合理；
+- **拓展**：在 Create 的体系内增加少量新组件或新行为。
 
-## What it does / 功能
+所有功能按模块组织。每个模块都可以单独启用/禁用并调整参数；不安装对应附属时，相关模块自动关闭，游戏仍可正常启动。
 
-While the typewriter is **active** (or while binding a key from a typewriter item):
+## 当前状态 / Status
 
-- the key event is handed to Simulated's own typewriter handler first, so the
-  typewriter still sends its frequency packet and plays its sound;
-- the event is then cancelled at the head of `KeyboardHandler#keyPress`, before
-  vanilla `KeyMapping` and before NeoForge `InputEvent.Key`;
-- therefore no other mod's shortcut can fire while you are typing.
+| 版本 | 状态 | 内容 |
+| --- | --- | --- |
+| **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
+| **2.0.0** | 开发中 | 更名、模块化、仅 Create 前置、配置系统、迁移已有模块 |
 
-`Esc` still exits the typewriter, and `F2` / `F11` remain available.
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。2.0.0 才会以新名字、新依赖规则发布。
 
-打字机**激活**时（以及手持打字机物品绑定按键时）：
+## 设计原则 / Design rules
 
-- 先把按键交给 Simulated 自己的打字机处理器，频率包、声音、按键记录都照常；
-- 然后在 `KeyboardHandler#keyPress` 的入口取消事件，早于原版 `KeyMapping` 和
-  NeoForge `InputEvent.Key`；
-- 因此打字时不会再触发其他模组的快捷键。
+1. **唯一硬前置是 Create 本体。**  
+   Create: Aeronautics / Simulated、Create: Crafts & Additions、Create Big Cannons、CBCAT、CBCMW 等全部是**可选联动**。
 
-`Esc` 仍可退出打字机，`F2` / `F11` 保留原版功能。
+2. **缺附属不崩游戏。**  
+   对应附属不存在时，相关模块自动禁用；其余模块照常工作。
 
-## Requirements / 环境
+3. **一切可配置。**  
+   每个模块都有启用/禁用开关和参数；默认值安全。计划接入 Create 的配置菜单，让玩家在游戏内调整，而不必手改文件。
 
-| | |
+4. **客户端/服务端边界清晰。**  
+   纯客户端模块（如打字机按键保护）不要求服务端安装；涉及方块、配方和动力网络的模块会明确标注安装侧。
+
+5. **不复制附属代码。**  
+   优先使用公开 API、反射和软依赖；不打包、不重编译其他模组的代码或素材。
+
+## 模块 / Modules
+
+| 模块 | 状态 | 前置 | 说明 |
+| --- | --- | --- | --- |
+| **Typewriter Keyguard** | ✅ 1.0.0 | Create + 可选 Simulated | 打字机激活时接管键盘，避免其他模组快捷键打断 |
+| **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
+| **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
+| **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道开关、生存配方、火炮装载辅助等 |
+| **Aeronautics 扩展** | ⬜ 计划 | Create + 可选 Aeronautics | 旋转轴承应力、速度单位等 |
+
+## 路线图 / Roadmap
+
+详细状态、依赖和目标版本见 [ROADMAP.md](ROADMAP.md)。
+
+| # | 类型 | 内容 | 状态 |
+| --- | --- | --- | --- |
+| 1 | 修复 | 打字机使用时被其他模组热键拦截 | ✅ 1.0.0 |
+| 2 | 修复 | CCA 线缆无法用 Create NBT 蓝图打印 | 🟡 原型 |
+| 3 | 调整 | 传动组件在转速变化时的动画更平滑 | ⬜ 计划 |
+| 4 | 调整 | 禁用 CBCAT 对 CBC 火炮内弹道学的修改，回归原版行为 | ⬜ 计划 |
+| 5 | 调整 | 为 CBCMW 物品添加生存配方（可能新增铸模） | ⬜ 计划 |
+| 6 | 调整 | 动力活塞/轴承/起重机按移动规模与质量计算应力 | ⬜ 计划 |
+| 7 | 调整 | 类似 6，但对象是 Aeronautics 旋转轴承 | ⬜ 计划 |
+| 8 | 拓展 | 链式动力活塞（横向绳索滑轮，暂定 16 格） | ⬜ 计划 |
+| 9 | 拓展 | Aeronautics 速度传感器支持 km/h、节等单位 | ⬜ 计划 |
+
+## 兼容性 / Compatibility
+
+| 项目 | 要求 |
 | --- | --- |
 | Minecraft | 1.21.1 |
-| NeoForge | 21.1.228 or newer |
-| Create: Aeronautics | 1.3.2+ (bundled Simulated 1.3.2+) |
-| Side | **Client only** — do not install on a dedicated server |
+| NeoForge | 21.1.228 或更高 |
+| Create | 6.0.10 或更高 |
+| 必需前置 | **仅 Create**（2.0.0 起） |
+| 可选联动 | Create: Aeronautics / Simulated、Create: Crafts & Additions、Create Big Cannons、CBCAT、CBCMW |
 
-## Download / 下载
+**1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。2.0.0 会把 Simulated 改为可选。
 
-- [GitHub Releases](https://github.com/Gustav-800/create-every-key-a-gem/releases)
-- Modrinth: `https://modrinth.com/mod/create-every-key-a-gem`（审核通过后可用）
+## 配置 / Configuration
 
-## Installation / 安装
+计划在 2.0.0 提供：
 
-1. Install Minecraft 1.21.1 with NeoForge 21.1.228+.
-2. Install Create: Aeronautics (and its dependencies, Create and Sable).
-3. Drop `create-every-key-a-gem-1.0.0.jar` into the instance's `mods` folder.
-4. Restart the game completely.
+- 每个模块的 `enabled` 开关；
+- 模块参数（阈值、倍率、单位、配方开关等）；
+- 与 Create 配置菜单兼容的游戏内入口；
+- 配置文件缺失或损坏时回退到安全默认值。
 
-## How it works / 原理
+**1.0.0 目前没有配置文件。** 打字机模块在检测到 Simulated 时启用。
 
-The addon uses a small Mixin at the head of
-`net.minecraft.client.KeyboardHandler#keyPress`. Simulated's handler is accessed
-reflectively, so the addon does not need to compile against Simulated's jar. If
-Simulated changes its API, the addon logs a warning and fails open (normal
-keyboard behaviour) instead of crashing.
+## 安装 / Installation
 
-本模组在 `KeyboardHandler#keyPress` 的 HEAD 注入。对 Simulated 的处理器使用反射调用，
-因此编译不依赖 Simulated 的 jar；如果将来 Simulated 修改 API，模组会记录警告并回退到
-正常键盘行为，而不是让游戏崩溃。
+### 1.0.0（当前发布版）
 
-## Project status / 关于维护
+1. Minecraft 1.21.1 + NeoForge 21.1.228+
+2. Create + Create: Aeronautics（及其前置 Sable）
+3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
+4. 完全重启游戏
 
-I have no programming background and limited capacity to maintain this project. It was created to solve one small issue I ran into myself; I am publishing it in case it helps others. If it cannot be made public, I will simply keep using it privately.
+### 2.0.0（开发中）
 
-作者本人没有代码能力，对模组的维护能力也有限。这个模组只是解决作者个人遇到的一个小问题；公开发布只是希望顺便便利其他用户。如果无法公开，作者也会继续自用。
+只需要 Create。其他附属按需安装；缺失时对应模块自动关闭。
 
-## Compatibility / 兼容性
+## 构建 / Building
 
-- Client-side only; works on any server because it never sends extra packets.
-- Does not touch mouse shortcuts; only keyboard input is claimed.
-- The typewriter's key-editor GUI is a normal `Screen` and is left alone.
-- Not affiliated with Create, Create: Aeronautics, or Simulated.
+### Gradle
 
-## Building / 构建
+```bash
+./gradlew build
+# Windows
+.\gradlew.bat build
+```
 
-### PowerShell (verified)
-
-Requires a local 1.21.1 NeoForge installation with the client jar in `libraries`:
+### PowerShell（本机验证过的备用方式）
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1 `
   -MinecraftDir 'C:\path\to\.minecraft'
 ```
 
-The jar is written to `build/libs/create-every-key-a-gem-1.0.0.jar`.
+Gradle 构建需要能访问 `maven.neoforged.net`；如果网络不通，用 PowerShell 脚本针对本机已安装的 NeoForge 进行编译。
 
-### Gradle (for contributors)
+## 链接 / Links
 
-```bash
-./gradlew build       # macOS / Linux
-.\gradlew.bat build   # Windows
-```
+- GitHub：<https://github.com/Gustav-800/create-every-key-a-gem>（仓库将更名为 `create-oddities`）
+- Modrinth：<https://modrinth.com/mod/create-every-key-a-gem>（审核中；通过后更名）
+- MC百科：[机械动力：字字珠玑](https://www.mcmod.cn/class/32518.html)（已收录；后续更名）
+- Cable Guard 原型：<https://github.com/Gustav-800/create-cable-guard>
+- Mechanical Principles 原型：<https://github.com/Gustav-800/create-mechanical-principles>
 
-The Gradle build downloads NeoForge from `maven.neoforged.net`. If that host is
-unreachable on your network (common on some connections), use the PowerShell
-build above; it compiles against the NeoForge jars already installed by the
-launcher.
+## 许可 / License
 
-## License / 许可
+MIT。详见 [LICENSE](LICENSE)。
 
-MIT — see [LICENSE](LICENSE).
+本项目为非官方附属，与 Create、Create: Aeronautics、Simulated、Create: Crafts & Additions、Create Big Cannons 等项目的开发团队无隶属关系。
