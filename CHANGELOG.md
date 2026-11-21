@@ -7,6 +7,8 @@
 - F11 now toggles fullscreen while the typewriter is active. The event is handled
   at the head of `KeyboardHandler#keyPress` and cancelled, so Simulated's later
   handler cannot consume it.
+- F3 remains explicitly available for debug combos; the old F11 constant
+  accidentally pointed at F3 (292) instead of F11 (300).
 
 ### Changed
 

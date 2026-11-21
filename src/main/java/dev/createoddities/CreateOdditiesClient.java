@@ -26,6 +26,8 @@ public final class CreateOdditiesClient {
 
     /** GLFW_KEY_F2 - keep screenshots usable while typing. */
     private static final int GLFW_KEY_F2 = 291;
+    /** GLFW_KEY_F3 - keep debug combos usable while typing. */
+    private static final int GLFW_KEY_F3 = 292;
     /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
     private static final int GLFW_KEY_F11 = 300;
     /** GLFW_PRESS - only toggle fullscreen on the initial press, not on release/repeat. */
@@ -40,8 +42,8 @@ public final class CreateOdditiesClient {
     }
 
     public static boolean shouldCapture(long windowHandle, int key) {
-        // Let a couple of harmless window/system keys through.
-        if (key == GLFW_KEY_F2 || key == GLFW_KEY_F11) {
+        // Let a few harmless window/system keys through.
+        if (key == GLFW_KEY_F2 || key == GLFW_KEY_F3 || key == GLFW_KEY_F11) {
             return false;
         }
         return isTypewriterActive(windowHandle);
