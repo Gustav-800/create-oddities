@@ -5,9 +5,11 @@
 ### Changed
 
 - Project renamed to **Create Oddities / 机械动力：奇思妙想**.
+- Internal mod id changed from `every_key_a_gem` to `create_oddities`.
 - Scope expanded from the typewriter keyguard to a modular collection of fixes,
   tweaks, and additions for Create and its addons.
 - Added `ROADMAP.md` and updated the README with the module/config/dependency policy.
+- Create is now the only required mod dependency; Simulated is optional.
 
 ### Planned
 

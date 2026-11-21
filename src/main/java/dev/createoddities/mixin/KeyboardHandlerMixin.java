@@ -1,6 +1,6 @@
-package dev.everykeyagem.mixin;
+package dev.createoddities.mixin;
 
-import dev.everykeyagem.EveryKeyAGemClient;
+import dev.createoddities.CreateOdditiesClient;
 import net.minecraft.client.KeyboardHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,7 +22,7 @@ public abstract class KeyboardHandlerMixin {
             cancellable = true,
             remap = false
     )
-    private void everykeyagem$captureTypewriterKeys(
+    private void createoddities$captureTypewriterKeys(
             long windowHandle,
             int key,
             int scanCode,
@@ -30,8 +30,8 @@ public abstract class KeyboardHandlerMixin {
             int modifiers,
             CallbackInfo ci
     ) {
-        if (EveryKeyAGemClient.shouldCapture(windowHandle, key)) {
-            EveryKeyAGemClient.forwardToTypewriter(key, scanCode, action, modifiers);
+        if (CreateOdditiesClient.shouldCapture(windowHandle, key)) {
+            CreateOdditiesClient.forwardToTypewriter(key, scanCode, action, modifiers);
             ci.cancel();
         }
     }

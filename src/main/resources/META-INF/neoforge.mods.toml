@@ -3,7 +3,7 @@ loaderVersion = "[4,)"
 license = "MIT"
 
 [[mods]]
-modId = "every_key_a_gem"
+modId = "create_oddities"
 version = "0.1.0"
 displayName = "Create Oddities"
 authors = "Gustav800"
@@ -11,30 +11,30 @@ logoFile = "icon.png"
 description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. The 0.1.0 development build currently contains the wireless typewriter keyguard; Create: Aeronautics / Simulated is optional and the module disables itself when it is not installed.'''
 
 [[mixins]]
-config = "every_key_a_gem.mixins.json"
+config = "create_oddities.mixins.json"
 
-[[dependencies.every_key_a_gem]]
+[[dependencies.create_oddities]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21.1.228,)"
 ordering = "NONE"
 side = "CLIENT"
 
-[[dependencies.every_key_a_gem]]
+[[dependencies.create_oddities]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.1]"
 ordering = "NONE"
 side = "CLIENT"
 
-[[dependencies.every_key_a_gem]]
+[[dependencies.create_oddities]]
 modId = "create"
 type = "required"
 versionRange = "[6.0.10,)"
 ordering = "AFTER"
 side = "CLIENT"
 
-[[dependencies.every_key_a_gem]]
+[[dependencies.create_oddities]]
 modId = "simulated"
 type = "optional"
 versionRange = "[1.3.2,)"

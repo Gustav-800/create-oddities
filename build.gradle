@@ -4,7 +4,7 @@ plugins {
 }
 
 version = '0.1.0'
-group = 'dev.everykeyagem'
+group = 'dev.createoddities'
 
 base {
     archivesName = 'create-oddities'
@@ -24,7 +24,7 @@ neoForge {
     }
 
     mods {
-        every_key_a_gem {
+        create_oddities {
             sourceSet sourceSets.main
         }
     }

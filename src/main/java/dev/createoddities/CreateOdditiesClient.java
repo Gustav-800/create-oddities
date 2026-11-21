@@ -1,4 +1,4 @@
-package dev.everykeyagem;
+package dev.createoddities;
 
 import java.lang.reflect.Method;
 import net.minecraft.client.Minecraft;
@@ -6,15 +6,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Decides when keyboard input belongs exclusively to the typewriter and hands
- * the event to Simulated's own handler.
+ * Typewriter keyguard module for Create Oddities.
  *
- * <p>The Simulated classes are accessed reflectively on purpose: this addon
- * only needs three public members, and reflection keeps the build independent
- * of Simulated's jar. If Simulated changes those members, the addon fails open
- * (normal keyboard behaviour) instead of crashing the game.</p>
+ * <p>Decides when keyboard input belongs exclusively to the typewriter and hands
+ * the event to Simulated's own handler.</p>
+ *
+ * <p>The Simulated classes are accessed reflectively on purpose: this module
+ * only needs two public members, and reflection keeps the build independent
+ * of Simulated's jar. If Simulated is absent or changes those members, the
+ * module fails open (normal keyboard behaviour) instead of crashing the game.</p>
  */
-public final class EveryKeyAGemClient {
+public final class CreateOdditiesClient {
     private static final Logger LOGGER = LoggerFactory.getLogger("Create Oddities");
 
     private static final String HANDLER_CLASS =
@@ -32,7 +34,7 @@ public final class EveryKeyAGemClient {
     private static Method onKeyPressMethod;
     private static boolean reflectionBroken;
 
-    private EveryKeyAGemClient() {
+    private CreateOdditiesClient() {
     }
 
     public static boolean shouldCapture(long windowHandle, int key) {
