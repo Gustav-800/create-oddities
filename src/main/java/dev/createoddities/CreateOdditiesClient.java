@@ -24,6 +24,8 @@ public final class CreateOdditiesClient {
     private static final String ACTIVE = "ACTIVE";
     private static final String BINDING_FROM_ITEM = "BINDING_FROM_ITEM";
 
+    /** GLFW_KEY_ESCAPE - forwarded to Simulated so it can disconnect cleanly. */
+    private static final int GLFW_KEY_ESCAPE = 256;
     /** GLFW_KEY_F3 - keep debug combos usable while typing. */
     private static final int GLFW_KEY_F3 = 292;
     /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
@@ -40,7 +42,11 @@ public final class CreateOdditiesClient {
     }
 
     public static boolean shouldCapture(long windowHandle, int key) {
-        // Let the declared window/system keys through.
+        // Esc is forwarded to Simulated, which disconnects the user and exits the typewriter.
+        if (key == GLFW_KEY_ESCAPE) {
+            return isTypewriterActive(windowHandle);
+        }
+        // F3 and F11 are left to vanilla; everything else belongs to the typewriter.
         if (key == GLFW_KEY_F3 || key == GLFW_KEY_F11) {
             return false;
         }
