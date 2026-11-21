@@ -16,8 +16,8 @@
 先确认 jar 是最新的 0.1.1：
 
 ```
-大小：121,691 字节
-SHA-256：C55C7C52143E5A7C314CF63EEF662F8039337A6305C255634B6701E70B723432
+大小：121,739 字节
+SHA-256：9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9
 ```
 
 ---
@@ -101,7 +101,7 @@ CurseForge 的编辑器是富文本：
 0.1.1 — 2026-11-21
 
 Fixed
-- F11 now toggles fullscreen while the typewriter is active. The event is handled at the head of KeyboardHandler#keyPress and cancelled, so Simulated's later handler cannot consume it.
+- F11 now toggles fullscreen while the typewriter is active. The event is handled at the head of KeyboardHandler#keyPress and cancelled, so Simulated's later handler cannot consume it. F3 and Esc are also in the allowed-key list; F2 is no longer a special exception.
 
 Changed
 - Project renamed to Create Oddities / 机械动力：奇思妙想.
