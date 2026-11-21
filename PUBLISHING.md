@@ -53,7 +53,7 @@ jar：`build/libs/create-every-key-a-gem-1.0.0.jar`
 ### 1.3 上传代码
 
 本地仓库**已经初始化并完成首次提交**（`Create: Every Key a Gem 1.0.0`），
-`origin` 已指向 `https://github.com/Gustav-800/create-every-key-a-gem.git`。
+`origin` 已指向 `https://github.com/Gustav-800/create-oddities.git`。
 
 你只需要在 GitHub 创建好空仓库后，在项目目录打开 PowerShell：
 
@@ -136,8 +136,8 @@ Settings → General：
 | Categories | `Utility`、`Technology` |
 | Environment | **Client only** |
 | License | `MIT` |
-| Source | `https://github.com/Gustav-800/create-every-key-a-gem` |
-| Issues | `https://github.com/Gustav-800/create-every-key-a-gem/issues` |
+| Source | `https://github.com/Gustav-800/create-oddities` |
+| Issues | `https://github.com/Gustav-800/create-oddities/issues` |
 
 4. **Description**：把 `docs/modrinth-description.md` 的全文粘贴进去。
 5. **Icon**：上传 `src/main/resources/icon.png`（512×512，PNG，<256KB）。
@@ -235,7 +235,7 @@ Settings → General：
 
 - 在“下载地址”/“相关链接”中补充：
   - Modrinth：`https://modrinth.com/mod/create-every-key-a-gem`
-  - GitHub Releases：`https://github.com/Gustav-800/create-every-key-a-gem/releases`
+  - GitHub Releases：`https://github.com/Gustav-800/create-oddities/releases`
 - 在“日志”页添加 1.0.0 更新日志（复制 `CHANGELOG.md`）。
 - 如果条目被合并/重命名，按审核意见修改，不要重复创建。
 

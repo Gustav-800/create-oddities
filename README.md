@@ -134,7 +134,7 @@ Gradle 构建需要能访问 `maven.neoforged.net`；如果网络不通，用 Po
 
 ## 链接 / Links
 
-- GitHub：<https://github.com/Gustav-800/create-every-key-a-gem>（仓库将更名为 `create-oddities`）
+- GitHub：<https://github.com/Gustav-800/create-oddities>（已更名为 `create-oddities`）
 - Modrinth：<https://modrinth.com/mod/create-every-key-a-gem>（审核中；通过后更名）
 - MC百科：[机械动力：字字珠玑](https://www.mcmod.cn/class/32518.html)（已收录；后续更名）
 - Cable Guard 原型：<https://github.com/Gustav-800/create-cable-guard>
