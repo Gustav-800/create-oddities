@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — Create Oddities
+## Unreleased — 0.1.0 (Create Oddities, early development)
 
 ### Changed
 
@@ -11,10 +11,10 @@
 
 ### Planned
 
-- 2.0.0: module loader, configuration system, Create-only hard dependency.
-- 2.1.0: CCA blueprint cable fix, CBCAT ballistics toggle, Aeronautics speed units.
-- 2.2.0: smooth transmission animation, CBCMW recipes, dynamic stress model.
-- 2.3.0: Aeronautics bearing stress, chain-powered piston.
+- 0.1.0: module loader, configuration system, Create-only hard dependency.
+- 0.2.0: CCA blueprint cable fix, CBCAT ballistics toggle, Aeronautics speed units.
+- 0.3.0: smooth transmission animation, CBCMW recipes, dynamic stress model.
+- 0.4.0: Aeronautics bearing stress, chain-powered piston.
 
 ## 1.0.0 — 2026-10-18
 

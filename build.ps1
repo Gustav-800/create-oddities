@@ -8,7 +8,7 @@ $root = $PSScriptRoot
 $buildDir = Join-Path $root 'build'
 $classesDir = Join-Path $buildDir 'classes'
 $libsDir = Join-Path $buildDir 'libs'
-$jarName = 'create-every-key-a-gem-1.0.0.jar'
+$jarName = 'create-oddities-0.1.0.jar'
 $jarPath = Join-Path $libsDir $jarName
 
 $javac = Join-Path $JavaHome 'bin\javac.exe'
@@ -46,8 +46,8 @@ Copy-Item (Join-Path $root 'src\main\resources\*') $classesDir -Recurse -Force
 $manifest = Join-Path $buildDir 'MANIFEST.MF'
 @(
     'Manifest-Version: 1.0',
-    'Implementation-Title: Create: Every Key a Gem',
-    'Implementation-Version: 1.0.0'
+    'Implementation-Title: Create Oddities',
+    'Implementation-Version: 0.1.0'
 ) | Set-Content -Path $manifest -Encoding ASCII
 
 if (Test-Path $jarPath) { Remove-Item $jarPath -Force }

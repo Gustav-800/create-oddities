@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * (normal keyboard behaviour) instead of crashing the game.</p>
  */
 public final class EveryKeyAGemClient {
-    private static final Logger LOGGER = LoggerFactory.getLogger("Every Key a Gem");
+    private static final Logger LOGGER = LoggerFactory.getLogger("Create Oddities");
 
     private static final String HANDLER_CLASS =
             "dev.simulated_team.simulated.content.blocks.redstone.linked_typewriter.LinkedTypewriterInteractionHandler";
@@ -85,6 +85,9 @@ public final class EveryKeyAGemClient {
                 Class<?> handler = Class.forName(HANDLER_CLASS);
                 getModeMethod = handler.getMethod("getMode");
                 onKeyPressMethod = handler.getMethod("onKeyPress", int.class, int.class, int.class, int.class);
+            } catch (ClassNotFoundException | NoClassDefFoundError exception) {
+                reflectionBroken = true;
+                LOGGER.info("Simulated is not installed; the typewriter keyguard module is disabled.");
             } catch (ReflectiveOperationException | RuntimeException | LinkageError exception) {
                 disableReflection("find Simulated's typewriter handler", exception);
             }
@@ -96,7 +99,7 @@ public final class EveryKeyAGemClient {
         if (!reflectionBroken) {
             reflectionBroken = true;
             LOGGER.warn(
-                    "Every Key a Gem could not {}; typewriter key protection is disabled. "
+                    "Create Oddities could not {}; the typewriter keyguard module is disabled. "
                             + "This usually means the installed Create: Aeronautics / Simulated version is not supported.",
                     action,
                     throwable

@@ -4,7 +4,7 @@
 
 **机械动力及其附属的模块化补丁与扩展：修复小问题，调整旧机制，偶尔加点新东西。**
 
-> 这个项目始于无线红石打字机的按键冲突修复。从 2.0.0 起，它以 **Create Oddities / 机械动力：奇思妙想** 的名字继续扩展。
+> 这个项目始于无线红石打字机的按键冲突修复。从 0.1.0 起，它以 **Create Oddities / 机械动力：奇思妙想** 的名字继续扩展。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62b47a.svg)](https://www.minecraft.net/)
@@ -28,9 +28,11 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
-| **2.0.0** | 开发中 | 更名、模块化、仅 Create 前置、配置系统、迁移已有模块 |
+| **0.1.0** | 开发中（首个 Create Oddities 版本） | 更名、模块化、仅 Create 前置、配置系统、迁移已有模块 |
 
-> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。2.0.0 才会以新名字、新依赖规则发布。
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.0 是首个以新名字、新依赖规则开发的版本，目前尚未发布。
+>
+> 内部 mod id 暂时保留 `every_key_a_gem`，用于从 1.0.0 平滑过渡；模块系统稳定后再改。
 
 ## 设计原则 / Design rules
 
@@ -53,7 +55,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 模块 | 状态 | 前置 | 说明 |
 | --- | --- | --- | --- |
-| **Typewriter Keyguard** | ✅ 1.0.0 | Create + 可选 Simulated | 打字机激活时接管键盘，避免其他模组快捷键打断 |
+| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 迁移中 | Create + 可选 Simulated | 打字机激活时接管键盘，避免其他模组快捷键打断 |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道开关、生存配方、火炮装载辅助等 |
@@ -65,7 +67,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | # | 类型 | 内容 | 状态 |
 | --- | --- | --- | --- |
-| 1 | 修复 | 打字机使用时被其他模组热键拦截 | ✅ 1.0.0 |
+| 1 | 修复 | 打字机使用时被其他模组热键拦截 | ✅ 1.0.0（旧名） |
 | 2 | 修复 | CCA 线缆无法用 Create NBT 蓝图打印 | 🟡 原型 |
 | 3 | 调整 | 传动组件在转速变化时的动画更平滑 | ⬜ 计划 |
 | 4 | 调整 | 禁用 CBCAT 对 CBC 火炮内弹道学的修改，回归原版行为 | ⬜ 计划 |
@@ -82,14 +84,14 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | Minecraft | 1.21.1 |
 | NeoForge | 21.1.228 或更高 |
 | Create | 6.0.10 或更高 |
-| 必需前置 | **仅 Create**（2.0.0 起） |
+| 必需前置 | **仅 Create**（0.1.0 起） |
 | 可选联动 | Create: Aeronautics / Simulated、Create: Crafts & Additions、Create Big Cannons、CBCAT、CBCMW |
 
-**1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。2.0.0 会把 Simulated 改为可选。
+**1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。0.1.0 会把 Simulated 改为可选。
 
 ## 配置 / Configuration
 
-计划在 2.0.0 提供：
+0.1.0 目标：
 
 - 每个模块的 `enabled` 开关；
 - 模块参数（阈值、倍率、单位、配方开关等）；
@@ -100,14 +102,14 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 ## 安装 / Installation
 
-### 1.0.0（当前发布版）
+### 1.0.0（旧版发布，legacy）
 
 1. Minecraft 1.21.1 + NeoForge 21.1.228+
 2. Create + Create: Aeronautics（及其前置 Sable）
 3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 2.0.0（开发中）
+### 0.1.0（开发中）
 
 只需要 Create。其他附属按需安装；缺失时对应模块自动关闭。
 

@@ -3,11 +3,11 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.148'
 }
 
-version = '1.0.0'
+version = '0.1.0'
 group = 'dev.everykeyagem'
 
 base {
-    archivesName = 'create-every-key-a-gem'
+    archivesName = 'create-oddities'
 }
 
 java {
@@ -38,7 +38,7 @@ tasks.withType(JavaCompile).configureEach {
 jar {
     manifest {
         attributes(
-                'Implementation-Title': 'Create: Every Key a Gem',
+                'Implementation-Title': 'Create Oddities',
                 'Implementation-Version': project.version
         )
     }
