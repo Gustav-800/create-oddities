@@ -9,6 +9,7 @@
   handler cannot consume it.
 - F3 remains explicitly available for debug combos; the old F11 constant
   accidentally pointed at F3 (292) instead of F11 (300).
+- F2 is no longer a special exception; the declared pass-through keys are F3 and F11.
 
 ### Changed
 

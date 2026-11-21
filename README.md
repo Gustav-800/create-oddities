@@ -28,7 +28,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
-| **0.1.1** | 当前开发版 | 修复打字机激活时 F11 仍被拦截（F2/F3/F11 保留）；包含更名、内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
+| **0.1.1** | 当前开发版 | 修复打字机激活时 F11 仍被拦截（F3/F11 保留）；包含更名、内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
 
 > **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 是当前开发版，尚未正式发布。

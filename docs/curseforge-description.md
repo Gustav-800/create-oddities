@@ -22,7 +22,7 @@ This build contains the **Typewriter Keyguard** module:
 
 - While the Create: Aeronautics wireless typewriter owns the keyboard, keys bound to the typewriter no longer trigger other mods' shortcuts.
 - The key event is handed to Simulated's typewriter handler first, then cancelled before vanilla key mappings and other mods can process it.
-- **F11** still toggles fullscreen, **F2** still takes screenshots, and **F3** debug combos remain available while typing.
+- **F11** still toggles fullscreen, and **F3** debug combos remain available while typing.
 - The typewriter's own key-editor screen is left alone.
 
 F11 is handled explicitly at the keyboard entry point and cancelled, so Simulated's later key handler cannot consume it. F3 is explicitly passed through as well.
@@ -78,7 +78,7 @@ Create Oddities 是面向 Create 及其附属的早期开发模组集合。它�
 
 - 无线红石打字机接管键盘时，绑定的按键不再触发其他模组的快捷键；
 - 按键先交给 Simulated 的打字机处理器，再在进入原版按键映射和其他模组之前取消；
-- 打字时 **F11** 仍可切换全屏，**F2** 仍可截图，**F3** 调试组合键仍可用；
+- 打字时 **F11** 仍可切换全屏，**F3** 调试组合键仍可用；
 - 不接管打字机自己的按键编辑界面。
 
 ## 环境要求

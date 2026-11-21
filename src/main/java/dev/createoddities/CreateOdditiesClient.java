@@ -24,8 +24,6 @@ public final class CreateOdditiesClient {
     private static final String ACTIVE = "ACTIVE";
     private static final String BINDING_FROM_ITEM = "BINDING_FROM_ITEM";
 
-    /** GLFW_KEY_F2 - keep screenshots usable while typing. */
-    private static final int GLFW_KEY_F2 = 291;
     /** GLFW_KEY_F3 - keep debug combos usable while typing. */
     private static final int GLFW_KEY_F3 = 292;
     /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
@@ -42,8 +40,8 @@ public final class CreateOdditiesClient {
     }
 
     public static boolean shouldCapture(long windowHandle, int key) {
-        // Let a few harmless window/system keys through.
-        if (key == GLFW_KEY_F2 || key == GLFW_KEY_F3 || key == GLFW_KEY_F11) {
+        // Let the declared window/system keys through.
+        if (key == GLFW_KEY_F3 || key == GLFW_KEY_F11) {
             return false;
         }
         return isTypewriterActive(windowHandle);
