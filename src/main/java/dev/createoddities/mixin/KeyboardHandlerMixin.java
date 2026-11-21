@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * <p>Cancelling at HEAD means neither vanilla keybinds nor any other mod's key
  * listener ever sees the event while the typewriter owns the keyboard.</p>
  */
-@Mixin(value = KeyboardHandler.class, remap = false)
+@Mixin(value = KeyboardHandler.class, remap = false, priority = 2000)
 public abstract class KeyboardHandlerMixin {
     @Inject(
             method = "keyPress(JIIII)V",

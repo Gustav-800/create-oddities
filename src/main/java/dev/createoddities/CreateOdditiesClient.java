@@ -27,7 +27,7 @@ public final class CreateOdditiesClient {
     /** GLFW_KEY_F2 - keep screenshots usable while typing. */
     private static final int GLFW_KEY_F2 = 291;
     /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
-    private static final int GLFW_KEY_F11 = 292;
+    private static final int GLFW_KEY_F11 = 300;
     /** GLFW_PRESS - only toggle fullscreen on the initial press, not on release/repeat. */
     private static final int GLFW_PRESS = 1;
 
