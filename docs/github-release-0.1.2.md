@@ -4,19 +4,16 @@ F1-F12 and F3 debug-combo hotfix.
 
 ## Fixed
 
-- **F1-F12** now pass through while the typewriter is active. This restores
-  screenshots, fullscreen and the other function-key actions.
-- **F3 debug combos** now work: while F3 is held, the second key of the combo is
-  passed through instead of being captured by the typewriter.
+- **F1-F12** now pass through while the typewriter is active. Screenshots, fullscreen and the other function-key actions work again.
+- **F3 debug combos** now work: while F3 is held, the second key of the combo is passed through instead of being captured by the typewriter.
 - **Esc** still exits the typewriter.
-- **F11** still toggles fullscreen and cancels the event so Simulated cannot
-  consume it.
+- **F11** still toggles fullscreen and cancels the event so Simulated cannot consume it.
 
 ## Changed
 
 - Updated `neoforge.mods.toml` description for 0.1.2.
-- Updated README, issue template and metadata for the current dependency policy:
-  only Create is required; Create: Aeronautics / Simulated is optional.
+- Updated README, issue template and metadata for the current dependency policy: only Create is required; Create: Aeronautics / Simulated is optional.
+- Archived old 0.1.1-era platform docs under `docs/legacy/`.
 
 ## Requirements
 
@@ -38,11 +35,10 @@ F1-F12 and F3 debug-combo hotfix.
 
 ## Notes
 
-- 0.1.2 is an early development build. The module loader and configuration menu
-  are still planned for 0.2.0.
+- 0.1.2 is an early development build. The module loader and configuration menu are still planned for 0.2.0.
 - Client-only typewriter module; no extra packets are sent to the server.
 
 ## File
 
-`create-oddities-0.1.2.jar` — 121,906 bytes
+`create-oddities-0.1.2.jar` — 121,906 bytes  
 SHA-256: `81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390`
