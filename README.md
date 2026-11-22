@@ -31,11 +31,11 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
-| **0.1.2** | 当前开发版 | F1-F12 全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
+| **0.1.2** | 当前开发版 | 68 个可绑定键之外全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
 | **0.1.1** | 已发布 | 修复 F11 键码；Esc/F3/F11 放行；内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
 
-> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 已发布；0.1.2 是当前开发版，F1-F12 与 F3 组合键已修正。
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 已发布；0.1.2 是当前开发版，68 个可绑定键之外全部放行，并修正 F3 组合键。
 >
 > 0.1.x 起内部 mod id 改为 `create_oddities`。它和 1.0.0 的 `every_key_a_gem` 会被加载器视为两个不同模组；升级时必须先移除旧 jar，不能同时安装。
 
@@ -60,7 +60,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 模块 | 状态 | 前置 | 说明 |
 | --- | --- | --- | --- |
-| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.1.2 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；F1-F12 放行，F3 组合键可用，Esc 退出，F11 全屏 |
+| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.1.2 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏 |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道开关、生存配方、火炮装载辅助等 |

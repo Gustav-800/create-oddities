@@ -16,8 +16,8 @@
 先确认 jar 是最新的 0.1.2：
 
 ```
-大小：121,906 字节
-SHA-256：81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390
+大小：122,290 字节
+SHA-256：5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770
 ```
 
 ---
@@ -101,7 +101,7 @@ CurseForge 的编辑器是富文本：
 0.1.2 — 2026-11-22
 
 Fixed
-- F1-F12 are now passed through while the typewriter is active, restoring screenshots, fullscreen and the other function-key actions.
+- non-bindable keys are now passed through while the typewriter is active, restoring screenshots, fullscreen and the other function-key actions.
 - F3 debug combos now work: while F3 is held, the second key is passed through instead of being captured by the typewriter.
 - Esc exits the typewriter; F11 toggles fullscreen.
 

@@ -4,8 +4,10 @@
 
 ### Fixed
 
-- F1-F12 are now passed through while the typewriter is active. This restores
-  screenshots, fullscreen and the other function-key actions.
+- Keys outside the typewriter's 68 bindable keys are now passed through while the
+  typewriter is active. This restores screenshots, fullscreen and the other
+  function-key actions. The bindable set remains the 68 keys exposed by Simulated's
+  key editor; F1-F12, Insert, Home, numpad, PrintScreen and media keys are not captured.
 - F3 debug combos now work: while F3 is held, the second key is passed through
   instead of being captured by the typewriter.
 - Esc still exits the typewriter; F11 still toggles fullscreen.

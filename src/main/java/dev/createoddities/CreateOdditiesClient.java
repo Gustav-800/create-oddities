@@ -2,6 +2,7 @@ package dev.createoddities;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import java.lang.reflect.Method;
+import java.util.Set;
 import net.minecraft.client.Minecraft;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,14 +28,23 @@ public final class CreateOdditiesClient {
 
     /** GLFW_KEY_ESCAPE - forwarded to Simulated so it can disconnect cleanly. */
     private static final int GLFW_KEY_ESCAPE = 256;
-    /** GLFW_KEY_F1 - first function key; F1-F12 are left to vanilla. */
-    private static final int GLFW_KEY_F1 = 290;
     /** GLFW_KEY_F3 - held down while a debug combo is being used. */
     private static final int GLFW_KEY_F3 = 292;
     /** GLFW_KEY_F11 - fullscreen is toggled by this mod while typing. */
     private static final int GLFW_KEY_F11 = 300;
-    /** GLFW_KEY_F12 - last function key. */
-    private static final int GLFW_KEY_F12 = 301;
+
+    /**
+     * The 68 keyboard keys the typewriter can bind, in the same set exposed by
+     * Simulated's key-editor screen. Keys outside this set (F1-F12, Insert,
+     * Home, numpad, PrintScreen, media keys, etc.) are left to vanilla.
+     */
+    private static final Set<Integer> TYPEWRITER_KEYS = Set.of(
+            32, 39, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
+            59, 61, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78,
+            79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 96,
+            257, 258, 259, 261, 262, 263, 264, 265, 266, 267, 269, 280,
+            340, 341, 342, 343, 344, 345, 346, 348
+    );
     /** GLFW_PRESS - only toggle fullscreen on the initial press, not on release/repeat. */
     private static final int GLFW_PRESS = 1;
 
@@ -51,8 +61,9 @@ public final class CreateOdditiesClient {
         if (key == GLFW_KEY_ESCAPE) {
             return isTypewriterActive(windowHandle);
         }
-        // F1-F12 are function keys: leave them to vanilla (debug, screenshots, fullscreen, etc.).
-        if (isFunctionKey(key)) {
+        // Only the typewriter's 68 bindable keys belong to it. Everything else (F1-F12,
+        // Insert, Home, numpad, PrintScreen, media keys, ...) is left to vanilla.
+        if (!TYPEWRITER_KEYS.contains(key)) {
             return false;
         }
         // While F3 is held, the second key belongs to a vanilla debug combo. Let it through.
@@ -60,10 +71,6 @@ public final class CreateOdditiesClient {
             return false;
         }
         return isTypewriterActive(windowHandle);
-    }
-
-    private static boolean isFunctionKey(int key) {
-        return key >= GLFW_KEY_F1 && key <= GLFW_KEY_F12;
     }
 
     /**

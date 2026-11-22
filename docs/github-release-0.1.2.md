@@ -1,10 +1,10 @@
 # Create Oddities 0.1.2
 
-F1-F12 and F3 debug-combo hotfix.
+Non-bindable key and F3 debug-combo hotfix.
 
 ## Fixed
 
-- **F1-F12** now pass through while the typewriter is active. Screenshots, fullscreen and the other function-key actions work again.
+- **Keys outside the 68 bindable set** now pass through while the typewriter is active, including F1-F12, Insert, Home, numpad, PrintScreen and media keys. Screenshots, fullscreen and the other function-key actions work again.
 - **F3 debug combos** now work: while F3 is held, the second key of the combo is passed through instead of being captured by the typewriter.
 - **Esc** still exits the typewriter.
 - **F11** still toggles fullscreen and cancels the event so Simulated cannot consume it.
@@ -40,5 +40,5 @@ F1-F12 and F3 debug-combo hotfix.
 
 ## File
 
-`create-oddities-0.1.2.jar` — 121,906 bytes  
-SHA-256: `81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390`
+`create-oddities-0.1.2.jar` — 122,290 bytes  
+SHA-256: `5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770`

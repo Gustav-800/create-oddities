@@ -5,14 +5,14 @@
 | | |
 | --- | --- |
 | Artifact | `create-oddities-0.1.2.jar` |
-| Size | 121,906 bytes |
-| SHA-256 | `81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390` |
+| Size | 122,290 bytes |
+| SHA-256 | `5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770` |
 | Built with | `build.ps1` against NeoForge 21.1.262 |
 | Status | Build compiled; in-game verification pending |
 
 ### What changed
 
-- F1-F12 pass through while the typewriter is active.
+- Keys outside the typewriter's 68 bindable keys pass through while it is active.
 - While F3 is held, the second key of a debug combo is passed through.
 - Esc exits the typewriter; F11 toggles fullscreen.
 

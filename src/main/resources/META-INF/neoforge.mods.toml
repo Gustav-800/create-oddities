@@ -8,7 +8,7 @@ version = "0.1.2"
 displayName = "Create Oddities"
 authors = "Gustav800"
 logoFile = "icon.png"
-description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. The 0.1.2 development build currently contains the wireless typewriter keyguard: F1-F12 pass through, F3+key debug combos are supported, Esc exits the typewriter, and Create: Aeronautics / Simulated is optional. The module disables itself when Simulated is not installed.'''
+description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. The 0.1.2 development build currently contains the wireless typewriter keyguard: keys outside the 68 bindable keys pass through, F3+key debug combos are supported, Esc exits the typewriter, and Create: Aeronautics / Simulated is optional. The module disables itself when Simulated is not installed.'''
 
 [[mixins]]
 config = "create_oddities.mixins.json"

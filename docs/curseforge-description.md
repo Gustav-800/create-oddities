@@ -2,11 +2,11 @@
 
 ## 短简介（Summary，约 150 字符）
 
-A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.1.2 includes the wireless typewriter keyguard with F1-F12 pass-through; only Create is required.
+A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.1.2 includes the wireless typewriter keyguard with all non-bindable keys passed through; only Create is required.
 
 ## 中文短简介
 
-机械动力及其附属的模块化补丁与扩展。0.1.2 包含无线红石打字机按键保护，F1-F12 放行；唯一硬前置为 Create。
+机械动力及其附属的模块化补丁与扩展。0.1.2 包含无线红石打字机按键保护，68 个可绑定键之外的按键放行；唯一硬前置为 Create。
 
 ---
 
@@ -22,10 +22,10 @@ This build contains the **Typewriter Keyguard** module:
 
 - While the Create: Aeronautics wireless typewriter owns the keyboard, keys bound to the typewriter no longer trigger other mods' shortcuts.
 - The key event is handed to Simulated's typewriter handler first, then cancelled before vanilla key mappings and other mods can process it.
-- **Esc** exits the typewriter, **F11** still toggles fullscreen, **F1-F12** pass through, and **F3** debug combos work while typing.
+- **Esc** exits the typewriter, **F11** still toggles fullscreen, **keys outside its 68 bindable keys** (F1-F12, Insert, Home, numpad, media, etc.) pass through, and **F3** debug combos work while typing.
 - The typewriter's own key-editor screen is left alone.
 
-F11 is handled explicitly at the keyboard entry point and cancelled, so Simulated's later key handler cannot consume it. F1-F12 are passed through; while F3 is held, the second key of a debug combo is passed through as well.
+F11 is handled explicitly at the keyboard entry point and cancelled, so Simulated's later key handler cannot consume it. Keys outside the 68 bindable set are passed through; while F3 is held, the second key of a debug combo is passed through as well.
 
 ## Requirements
 
@@ -78,7 +78,7 @@ Create Oddities 是面向 Create 及其附属的早期开发模组集合。它�
 
 - 无线红石打字机接管键盘时，绑定的按键不再触发其他模组的快捷键；
 - 按键先交给 Simulated 的打字机处理器，再在进入原版按键映射和其他模组之前取消；
-- 打字时 **Esc** 退出打字机，**F11** 仍可切换全屏，**F1-F12** 全部放行，**F3** 调试组合键可用；
+- 打字时 **Esc** 退出打字机，**F11** 仍可切换全屏，**68 个可绑定键之外的按键**全部放行，**F3** 调试组合键可用；
 - 不接管打字机自己的按键编辑界面。
 
 ## 环境要求
