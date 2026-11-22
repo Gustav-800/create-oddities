@@ -34,7 +34,6 @@
 | CurseForge 环境 | Client |
 | CurseForge 加载器 | NeoForge |
 | CurseForge 游戏版本 | 1.21.1 |
-| Modrinth 分类 | `Utility`、`Technology` |
 | 百科分类 | 辅助 |
 | 百科元素 | 辅助、红石 |
 | 百科标签 | 打字机、快捷键、客户端、红石、航空学、机械动力、修复 |
@@ -58,7 +57,6 @@
 | Issues | `https://github.com/Gustav-800/create-oddities/issues` |
 | CurseForge | `https://www.curseforge.com/minecraft/mc-mods/create-oddities` |
 | CurseForge 文件 ID | `9730085` |
-| Modrinth | `https://modrinth.com/mod/create-every-key-a-gem`（仍审核中，暂缓） |
 | MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.1，审核中） |
 | 父模组 CurseForge（Create） | `https://www.curseforge.com/minecraft/mc-mods/create` |
 | 父模组 CurseForge（Aeronautics） | `https://www.curseforge.com/minecraft/mc-mods/create-aeronautics` |

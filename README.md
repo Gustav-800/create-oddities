@@ -141,7 +141,6 @@ Gradle 构建需要能访问 `maven.neoforged.net`；如果网络不通，用 Po
 
 - GitHub：<https://github.com/Gustav-800/create-oddities>
 - CurseForge：<https://www.curseforge.com/minecraft/mc-mods/create-oddities>
-- Modrinth：<https://modrinth.com/mod/create-every-key-a-gem>（仍审核中，暂缓）
 - MC百科：[机械动力：奇思妙想](https://www.mcmod.cn/class/32518.html)（更名/0.1.1 审核中）
 - Cable Guard 原型：<https://github.com/Gustav-800/create-cable-guard>
 - Mechanical Principles 原型：<https://github.com/Gustav-800/create-mechanical-principles>
