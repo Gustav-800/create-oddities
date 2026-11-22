@@ -12,7 +12,7 @@
 | CurseForge 项目 ID | `1820521` |
 | CurseForge slug | `create-oddities` |
 | GitHub 仓库 | `create-oddities` |
-| 当前版本 | `0.1.1` |
+| 当前版本 | `0.1.2` |
 | 许可证 | MIT |
 | 作者 | Gustav800 |
 
@@ -20,11 +20,11 @@
 
 **English:**
 
-> A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.1.1 includes the wireless typewriter keyguard; only Create is required.
+> A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.1.2 includes the wireless typewriter keyguard with F1-F12 and F3 combos; only Create is required.
 
 **中文：**
 
-> 机械动力及其附属的模块化补丁与扩展。0.1.1 包含无线红石打字机按键保护；唯一硬前置为 Create。
+> 机械动力及其附属的模块化补丁与扩展。0.1.2 包含无线红石打字机按键保护，F1-F12 放行、F3 组合键可用；唯一硬前置为 Create。
 
 ## 分类与标签 / Categories & tags
 
@@ -55,11 +55,12 @@
 | --- | --- |
 | GitHub | `https://github.com/Gustav-800/create-oddities` |
 | Issues | `https://github.com/Gustav-800/create-oddities/issues` |
-| GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1` |
-| GitHub Release SHA-256 | `9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9` |
+| GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1`（0.1.2 发布后更新） |
+| GitHub Release SHA-256（0.1.1） | `9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9` |
+| 0.1.2 构建 SHA-256 | `81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390` |
 | CurseForge | `https://www.curseforge.com/minecraft/mc-mods/create-oddities` |
-| CurseForge 文件 ID | `9730085` |
-| MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.1，审核中） |
+| CurseForge 文件 ID | `9730085`（0.1.1）；0.1.2 上传后更新 |
+| MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.2，审核中） |
 | 父模组 CurseForge（Create） | `https://www.curseforge.com/minecraft/mc-mods/create` |
 | 父模组 CurseForge（Aeronautics） | `https://www.curseforge.com/minecraft/mc-mods/create-aeronautics` |
 
@@ -68,4 +69,5 @@
 | 版本 | 状态 |
 | --- | --- |
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
-| `0.1.1` | 当前 Create Oddities 开发版；CurseForge 已发布 |
+| `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
+| `0.1.2` | 当前开发版；F1-F12 与 F3 组合键修正，待发布 |

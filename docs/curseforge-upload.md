@@ -6,18 +6,18 @@
 
 | 材料 | 文件 |
 | --- | --- |
-| jar | `D:\常用\MC模组开发\create-oddities\build\libs\create-oddities-0.1.1.jar` |
+| jar | `D:\常用\MC模组开发\create-oddities\build\libs\create-oddities-0.1.2.jar` |
 | 项目头像 | `src\main\resources\icon.png`（512×512） |
 | 项目简介 | `docs\curseforge-description.md` |
 | 源码 | `https://github.com/Gustav-800/create-oddities` |
 | 问题反馈 | `https://github.com/Gustav-800/create-oddities/issues` |
 | 许可 | MIT |
 
-先确认 jar 是最新的 0.1.1：
+先确认 jar 是最新的 0.1.2：
 
 ```
-大小：121,739 字节
-SHA-256：9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9
+大小：121,906 字节
+SHA-256：81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390
 ```
 
 ---
@@ -79,34 +79,35 @@ CurseForge 的编辑器是富文本：
 
 ---
 
-## 3. 上传 0.1.1 文件
+## 3. 上传 0.1.2 文件
 
 进入项目 Dashboard → **Files** → **Upload File**（上传文件）。
 
 | 字段 | 填写 |
 | --- | --- |
-| File | `build\libs\create-oddities-0.1.1.jar` |
-| Display name | `Create Oddities 0.1.1` |
+| File | `build\libs\create-oddities-0.1.2.jar` |
+| Display name | `Create Oddities 0.1.2` |
 | Release type | `Beta`（早期开发版） |
 | Game version | `1.21.1` |
 | Mod loader | `NeoForge` |
 | Environment | `Client` |
-| File name | 保持 `create-oddities-0.1.1.jar` |
+| File name | 保持 `create-oddities-0.1.2.jar` |
 
 ### Changelog
 
-复制 `CHANGELOG.md` 的 0.1.1 段：
+复制 `CHANGELOG.md` 的 0.1.2 段：
 
 ```
-0.1.1 — 2026-11-21
+0.1.2 — 2026-11-22
 
 Fixed
-- F11 now toggles fullscreen while the typewriter is active. The event is handled at the head of KeyboardHandler#keyPress and cancelled, so Simulated's later handler cannot consume it. F3 and Esc are also in the allowed-key list; F2 is no longer a special exception.
+- F1-F12 are now passed through while the typewriter is active, restoring screenshots, fullscreen and the other function-key actions.
+- F3 debug combos now work: while F3 is held, the second key is passed through instead of being captured by the typewriter.
+- Esc exits the typewriter; F11 toggles fullscreen.
 
 Changed
-- Project renamed to Create Oddities / 机械动力：奇思妙想.
-- Internal mod id changed from every_key_a_gem to create_oddities.
-- Create is now the only required mod dependency; Simulated is optional.
+- Updated neoforge.mods.toml description for the 0.1.2 behavior.
+- Updated README, issue template and metadata for the current dependency policy: only Create is required; Create: Aeronautics / Simulated is optional.
 ```
 
 ### Dependencies（依赖关系）
@@ -118,7 +119,7 @@ Changed
 | Create | **Required**（必需） |
 | Create: Aeronautics | **Optional**（可选） |
 
-不要添加其他附属为必需；当前 0.1.1 只硬依赖 Create。
+不要添加其他附属为必需；当前 0.1.2 只硬依赖 Create。
 
 ### 保存并提交
 
@@ -147,7 +148,7 @@ https://www.curseforge.com/minecraft/mc-mods/create-oddities
 1. 把 CurseForge 链接补进 README 的 Links 区
 2. 把 CurseForge 项目 ID 补进 `docs/metadata.md`（可选）
 3. MC百科条目里增加 CurseForge 下载链接（你自己改）
-4. 如果你愿意，再发一个 GitHub Release `v0.1.1`，附件用同一个 jar
+4. 如果你愿意，再发一个 GitHub Release `v0.1.2`，附件用同一个 jar
 
 ---
 
@@ -195,7 +196,7 @@ icon.png
 | Project name | Create Oddities |
 | Slug | `create-oddities` |
 | Project ID | 创建后填写 |
-| Latest file | `create-oddities-0.1.1.jar` |
+| Latest file | `create-oddities-0.1.2.jar` |
 | Game version | 1.21.1 |
 | Loader | NeoForge |
 | License | MIT |

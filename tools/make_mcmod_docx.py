@@ -8,8 +8,8 @@ from lxml import html
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "docs" / "mcmod-body-richtext.html"
-OUT = ROOT / "docs" / "mcmod-body-richtext.docx"
+SOURCE = ROOT / "docs" / "legacy" / "mcmod-body-richtext.html"
+OUT = ROOT / "docs" / "legacy" / "mcmod-body-richtext.docx"
 
 
 def set_font(run, size=11, bold=None, color=None):

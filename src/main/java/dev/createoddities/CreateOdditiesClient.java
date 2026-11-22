@@ -1,5 +1,6 @@
 package dev.createoddities;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import java.lang.reflect.Method;
 import net.minecraft.client.Minecraft;
 import org.slf4j.Logger;
@@ -26,10 +27,14 @@ public final class CreateOdditiesClient {
 
     /** GLFW_KEY_ESCAPE - forwarded to Simulated so it can disconnect cleanly. */
     private static final int GLFW_KEY_ESCAPE = 256;
-    /** GLFW_KEY_F3 - keep debug combos usable while typing. */
+    /** GLFW_KEY_F1 - first function key; F1-F12 are left to vanilla. */
+    private static final int GLFW_KEY_F1 = 290;
+    /** GLFW_KEY_F3 - held down while a debug combo is being used. */
     private static final int GLFW_KEY_F3 = 292;
-    /** GLFW_KEY_F11 - keep fullscreen toggling usable while typing. */
+    /** GLFW_KEY_F11 - fullscreen is toggled by this mod while typing. */
     private static final int GLFW_KEY_F11 = 300;
+    /** GLFW_KEY_F12 - last function key. */
+    private static final int GLFW_KEY_F12 = 301;
     /** GLFW_PRESS - only toggle fullscreen on the initial press, not on release/repeat. */
     private static final int GLFW_PRESS = 1;
 
@@ -46,11 +51,19 @@ public final class CreateOdditiesClient {
         if (key == GLFW_KEY_ESCAPE) {
             return isTypewriterActive(windowHandle);
         }
-        // F3 and F11 are left to vanilla; everything else belongs to the typewriter.
-        if (key == GLFW_KEY_F3 || key == GLFW_KEY_F11) {
+        // F1-F12 are function keys: leave them to vanilla (debug, screenshots, fullscreen, etc.).
+        if (isFunctionKey(key)) {
+            return false;
+        }
+        // While F3 is held, the second key belongs to a vanilla debug combo. Let it through.
+        if (InputConstants.isKeyDown(windowHandle, GLFW_KEY_F3)) {
             return false;
         }
         return isTypewriterActive(windowHandle);
+    }
+
+    private static boolean isFunctionKey(int key) {
+        return key >= GLFW_KEY_F1 && key <= GLFW_KEY_F12;
     }
 
     /**

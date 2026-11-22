@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.2 — 2026-11-22
+
+### Fixed
+
+- F1-F12 are now passed through while the typewriter is active. This restores
+  screenshots, fullscreen and the other function-key actions.
+- F3 debug combos now work: while F3 is held, the second key is passed through
+  instead of being captured by the typewriter.
+- Esc still exits the typewriter; F11 still toggles fullscreen.
+
+### Changed
+
+- Updated `neoforge.mods.toml` description to the 0.1.2 behavior.
+- Updated README, issue template and release metadata for the current dependency
+  policy (only Create is required; Create: Aeronautics / Simulated is optional).
+
 ## 0.1.1 — 2026-11-21
 
 ### Fixed

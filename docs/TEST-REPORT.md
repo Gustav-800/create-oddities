@@ -1,6 +1,30 @@
 # Test report / 测试记录
 
-## Build
+## 0.1.2 build
+
+| | |
+| --- | --- |
+| Artifact | `create-oddities-0.1.2.jar` |
+| Size | 121,906 bytes |
+| SHA-256 | `81699E3169C34CE33638A10DE8487C33C70205EFCE8089FA26DE5FF76D48A390` |
+| Built with | `build.ps1` against NeoForge 21.1.262 |
+| Status | Build compiled; in-game verification pending |
+
+### What changed
+
+- F1-F12 pass through while the typewriter is active.
+- While F3 is held, the second key of a debug combo is passed through.
+- Esc exits the typewriter; F11 toggles fullscreen.
+
+### Manual checks
+
+- [ ] F11 toggles fullscreen while typing, typewriter stays connected.
+- [ ] F3+A / F3+B / F3+G open the corresponding debug views.
+- [ ] F1 / F2 / F5 / F12 behave normally while typing.
+- [ ] Esc exits the typewriter without opening the pause menu.
+- [ ] A non-function shortcut (e.g. B) still does not open another mod's GUI.
+
+## 1.0.0 build (legacy)
 
 | | |
 | --- | --- |
