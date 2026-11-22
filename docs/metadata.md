@@ -55,6 +55,8 @@
 | --- | --- |
 | GitHub | `https://github.com/Gustav-800/create-oddities` |
 | Issues | `https://github.com/Gustav-800/create-oddities/issues` |
+| GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1` |
+| GitHub Release SHA-256 | `9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9` |
 | CurseForge | `https://www.curseforge.com/minecraft/mc-mods/create-oddities` |
 | CurseForge 文件 ID | `9730085` |
 | MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.1，审核中） |
