@@ -10,6 +10,7 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62b47a.svg)](https://www.minecraft.net/)
 [![NeoForge](https://img.shields.io/badge/NeoForge-21.1.228%2B-f16436.svg)](https://neoforged.net/)
 [![Create](https://img.shields.io/badge/Create-6.0.10%2B-c89b5a.svg)](https://modrinth.com/mod/create)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Create%20Oddities-f16436)](https://www.curseforge.com/minecraft/mc-mods/create-oddities)
 
 ## 项目定位 / What this is
 
@@ -138,9 +139,10 @@ Gradle 构建需要能访问 `maven.neoforged.net`；如果网络不通，用 Po
 
 ## 链接 / Links
 
-- GitHub：<https://github.com/Gustav-800/create-oddities>（已更名为 `create-oddities`）
-- Modrinth：<https://modrinth.com/mod/create-every-key-a-gem>（审核中；通过后更名）
-- MC百科：[机械动力：字字珠玑](https://www.mcmod.cn/class/32518.html)（已收录；后续更名）
+- GitHub：<https://github.com/Gustav-800/create-oddities>
+- CurseForge：<https://www.curseforge.com/minecraft/mc-mods/create-oddities>
+- Modrinth：<https://modrinth.com/mod/create-every-key-a-gem>（仍审核中，暂缓）
+- MC百科：[机械动力：奇思妙想](https://www.mcmod.cn/class/32518.html)（更名/0.1.1 审核中）
 - Cable Guard 原型：<https://github.com/Gustav-800/create-cable-guard>
 - Mechanical Principles 原型：<https://github.com/Gustav-800/create-mechanical-principles>
 
