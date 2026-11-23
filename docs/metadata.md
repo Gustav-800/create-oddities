@@ -55,9 +55,10 @@
 | --- | --- |
 | GitHub | `https://github.com/Gustav-800/create-oddities` |
 | Issues | `https://github.com/Gustav-800/create-oddities/issues` |
-| GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1`（0.1.2 发布后更新） |
+| GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1` |
+| GitHub Release v0.1.2 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.2` |
 | GitHub Release SHA-256（0.1.1） | `9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9` |
-| 0.1.2 构建 SHA-256 | `5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770` |
+| GitHub Release SHA-256（0.1.2） | `5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770` |
 | CurseForge | `https://www.curseforge.com/minecraft/mc-mods/create-oddities` |
 | CurseForge 文件 ID | `9730085`（0.1.1）；0.1.2 上传后更新 |
 | MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.2，审核中） |
@@ -70,4 +71,4 @@
 | --- | --- |
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
 | `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
-| `0.1.2` | 当前开发版；68 个可绑定键之外全部放行，并修正 F3 组合键；待发布 |
+| `0.1.2` | 已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
