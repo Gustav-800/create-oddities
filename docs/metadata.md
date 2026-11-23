@@ -71,4 +71,4 @@
 | --- | --- |
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
 | `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
-| `0.1.2` | 已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
+| `0.1.2` | GitHub 已发布；CurseForge 0.1.2 上传中 |
