@@ -69,7 +69,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 ## 路线图 / Roadmap
 
-详细状态、依赖和目标版本见 [ROADMAP.md](ROADMAP.md)。
+详细状态、依赖和目标版本见 [ROADMAP.md](ROADMAP.md)；上游源码/许可审计见 [docs/UPSTREAM-LICENSES.md](docs/UPSTREAM-LICENSES.md)。
 
 | 版本 | 主题 | 主要内容 |
 | --- | --- | --- |
