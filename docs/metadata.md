@@ -12,7 +12,7 @@
 | CurseForge 项目 ID | `1820521` |
 | CurseForge slug | `create-oddities` |
 | GitHub 仓库 | `create-oddities` |
-| 当前版本 | `0.2.0`（发布候选） |
+| 当前版本 | `0.2.0`（GitHub 已发布；CurseForge 待上传） |
 | 许可证 | MIT |
 | 作者 | Gustav800 |
 
@@ -57,12 +57,15 @@
 | Issues | `https://github.com/Gustav-800/create-oddities/issues` |
 | GitHub Release v0.1.1 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.1` |
 | GitHub Release v0.1.2 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.2` |
+| GitHub Release v0.2.0 | `https://github.com/Gustav-800/create-oddities/releases/tag/v0.2.0` |
 | GitHub Release SHA-256（0.1.1） | `9E7786F32B79FE42843851513D5A7FD2FEEE3ECB039973AA58BE144F541A21C9` |
 | GitHub Release SHA-256（0.1.2） | `5B8AF168F6FB0DCD7BF22146C1E3E0ADD0155ED919144321449EB0F6786DD770` |
+| GitHub Release SHA-256（0.2.0） | `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3` |
 | CurseForge | `https://www.curseforge.com/minecraft/mc-mods/create-oddities` |
 | CurseForge 文件 ID（0.1.1） | `9730085` |
 | CurseForge 文件 ID（0.1.2） | `9774067` |
 | CurseForge 0.1.2 文件 | `https://www.curseforge.com/minecraft/mc-mods/create-oddities/files/9774067` |
+| CurseForge 0.2.0 文件 | 待上传 |
 | MC百科 | `https://www.mcmod.cn/class/32518.html`（已提交更名/0.1.2，审核中） |
 | 父模组 CurseForge（Create） | `https://www.curseforge.com/minecraft/mc-mods/create` |
 | 父模组 CurseForge（Aeronautics） | `https://www.curseforge.com/minecraft/mc-mods/create-aeronautics` |
@@ -74,4 +77,4 @@
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
 | `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
 | `0.1.2` | GitHub 与 CurseForge 已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
-| `0.2.0` | 发布候选；模块框架、双端配置、速度传感器单位与最大速度上限；SHA-256 `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3` |
+| `0.2.0` | GitHub 已发布；模块框架、双端配置、速度传感器单位与最大速度上限；SHA-256 `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3`；CurseForge 文件待上传 |
