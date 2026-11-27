@@ -63,24 +63,24 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.1.2 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏 |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
-| **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道开关、生存配方、火炮装载辅助等 |
-| **Aeronautics 扩展** | ⬜ 计划 | Create + 可选 Aeronautics | 旋转轴承应力、速度单位等 |
+| **Create 调整** | ⬜ 计划 | Create；个别功能联动附属 | 铁轨朝向、传动杆穿栅栏、伪装方块、蓝图预览、动力臂 |
+| **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道、发射药、生存配方、装卸过渡 |
+| **Sable / Aeronautics 组件** | ⬜ 计划 | Create + 可选 Sable / Aeronautics | 锁链轴承、铰链/绞盘、绳索传动轮、摇杆、高度计 |
 
 ## 路线图 / Roadmap
 
 详细状态、依赖和目标版本见 [ROADMAP.md](ROADMAP.md)。
 
-| # | 类型 | 内容 | 状态 |
-| --- | --- | --- | --- |
-| 1 | 修复 | 打字机使用时被其他模组热键拦截 | ✅ 1.0.0（旧名） |
-| 2 | 修复 | CCA 线缆无法用 Create NBT 蓝图打印 | 🟡 原型 |
-| 3 | 调整 | 传动组件在转速变化时的动画更平滑 | ⬜ 计划 |
-| 4 | 调整 | 禁用 CBCAT 对 CBC 火炮内弹道学的修改，回归原版行为 | ⬜ 计划 |
-| 5 | 调整 | 为 CBCMW 物品添加生存配方（可能新增铸模） | ⬜ 计划 |
-| 6 | 调整 | 动力活塞/轴承/起重机按移动规模与质量计算应力 | ⬜ 计划 |
-| 7 | 调整 | 类似 6，但对象是 Aeronautics 旋转轴承 | ⬜ 计划 |
-| 8 | 拓展 | 链式动力活塞（横向绳索滑轮，暂定 16 格） | ⬜ 计划 |
-| 9 | 拓展 | Aeronautics 速度传感器支持 km/h、节等单位 | ⬜ 计划 |
+| 版本 | 主题 | 主要内容 |
+| --- | --- | --- |
+| 0.2.0 | 模块化基础 | 模块/配置、CCA 线缆蓝图、CBCAT 内弹道开关、速度单位 |
+| 0.2.1 | Create 小修 | 直行铁轨更多朝向、传动杆穿过栅栏/栏杆 |
+| 0.3.0 | Create 内容与视觉 | 伪装斜坡/机壳、蓝图等轴预览、传动动画平滑 |
+| 0.4.0 | CBC 火炮 | 自由选择发射药、半格高能发射药、装卸过渡、CBCMW 配方 |
+| 0.5.0 | Aeronautics 交互与能源 | 红石磁铁 FE、高度计转盘、鼠标摇杆 |
+| 0.6.0 | Sable 机械结构 | 锁链轴承、铰链/绞盘/万向铰链、绳索传动轮、轴承应力 |
+| 0.7.0 | 动力学与动态结构 | 动态应力、链式动力活塞、不完整方块组合 |
+| 0.8.0 | 动力臂与跨结构 | 序列装配、跨 Sable 物理结构交互 |
 
 ## 兼容性 / Compatibility
 
