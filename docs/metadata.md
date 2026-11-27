@@ -12,7 +12,7 @@
 | CurseForge 项目 ID | `1820521` |
 | CurseForge slug | `create-oddities` |
 | GitHub 仓库 | `create-oddities` |
-| 当前版本 | `0.2.0`（GitHub 已发布；CurseForge 已上传/审核中） |
+| 当前版本 | `0.2.0 Beta`（GitHub 已发布；CurseForge Beta/审核中） |
 | 许可证 | MIT |
 | 作者 | Gustav800 |
 
@@ -71,6 +71,8 @@
 | 父模组 CurseForge（Create） | `https://www.curseforge.com/minecraft/mc-mods/create` |
 | 父模组 CurseForge（Aeronautics） | `https://www.curseforge.com/minecraft/mc-mods/create-aeronautics` |
 
+0.x 阶段的 CurseForge 文件使用 `Beta`，除非明确宣布稳定版。
+
 ## 版本记录
 
 | 版本 | 状态 |
@@ -78,4 +80,4 @@
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
 | `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
 | `0.1.2` | GitHub 与 CurseForge 已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
-| `0.2.0` | GitHub 已发布；CurseForge 已上传（文件 ID 9854452，审核中）；模块框架、双端配置、速度传感器单位与最大速度上限；SHA-256 `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3` |
+| `0.2.0 Beta` | GitHub 已发布；CurseForge Beta 已上传（文件 ID 9854452，审核中）；模块框架、双端配置、速度传感器单位与最大速度上限；SHA-256 `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3` |
