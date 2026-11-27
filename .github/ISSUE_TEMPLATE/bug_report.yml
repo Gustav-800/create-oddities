@@ -8,6 +8,7 @@ body:
       value: |
         Thanks for reporting. Please include enough detail to reproduce the issue.
         Before reporting, make sure the jar is in the instance's `mods` folder and the game was fully restarted.
+        For server-side behavior, state whether this is singleplayer, a dedicated server, or a LAN world.
 
   - type: input
     id: minecraft
@@ -37,7 +38,7 @@ body:
     id: addon
     attributes:
       label: Create Oddities version
-      placeholder: "0.1.2"
+      placeholder: "0.2.0"
     validations:
       required: true
 

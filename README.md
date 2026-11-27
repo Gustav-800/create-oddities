@@ -52,7 +52,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
    每个模块都有启用/禁用开关和参数；默认值安全。计划接入 Create 的配置菜单，让玩家在游戏内调整，而不必手改文件。
 
 4. **客户端/服务端边界清晰。**  
-   纯客户端模块（如打字机按键保护）不要求服务端安装；涉及方块、配方和动力网络的模块会明确标注安装侧。
+   0.2.0 起模组本体为双端。打字机按键保护是纯客户端模块；速度传感器单位数据在服务端，需要双端安装。涉及方块、配方和动力网络的模块会明确标注安装侧。
 
 5. **不复制附属代码。**  
    优先使用公开 API、反射和软依赖；不打包、不重编译其他模组的代码或素材。
@@ -61,10 +61,10 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 模块 | 状态 | 前置 | 说明 |
 | --- | --- | --- | --- |
-| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.2.0 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏；`modules.typewriter_keyguard.enabled` |
+| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.2.0 当前 / 客户端 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏；`modules.typewriter_keyguard.enabled` |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
-| **Speed Display** | 🟢 0.2.0 | Create + 可选 Aeronautics | 每个速度传感器可在侧面切换 m/s、km/h、节；最大速度设置上限分别为 50 / 180 / 100；显示链接和护目镜同步 |
+| **Speed Display** | 🟢 0.2.0 / 双端 | Create + 可选 Aeronautics | 每个速度传感器可在侧面切换 m/s、km/h、节；最大速度设置上限分别为 50 / 180 / 100；显示链接和护目镜同步 |
 | **Create 调整** | ⬜ 计划 | Create；个别功能联动附属 | 铁轨朝向、传动杆穿栅栏、伪装方块、蓝图预览、动力臂 |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道、发射药、生存配方、装卸过渡 |
 | **Sable / Aeronautics 组件** | ⬜ 计划 | Create + 可选 Sable / Aeronautics | 锁链轴承、铰链/绞盘、绳索传动轮、摇杆、高度计 |
@@ -134,6 +134,8 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 2. 只需要 Create；Aeronautics / Simulated 可选
 3. 把 `create-oddities-0.2.0.jar` 放进 `mods/`
 4. 完全重启游戏
+
+服务端安装：速度传感器单位模块需要服务端也安装本模组；打字机按键保护只在客户端生效。
 
 ## 构建 / Building
 
