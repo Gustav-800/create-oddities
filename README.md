@@ -31,7 +31,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
-| **0.2.0** | Beta（GitHub；CurseForge Beta/审核中） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
+| **0.2.0** | Beta（GitHub Pre-release；CurseForge Beta/审核中） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
 | **0.1.2** | 已发布（GitHub + CurseForge） | 68 个可绑定键之外全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
 | **0.1.1** | 已发布 | 修复 F11 键码；Esc/F3/F11 放行；内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
@@ -128,7 +128,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 0.2.0（Beta）
+### 0.2.0（Beta / Pre-release）
 
 1. 先移除 1.0.0 的 `create-every-key-a-gem-1.0.0.jar`（内部 id 不同，不能共存）；再替换旧的 `create-oddities-0.1.x.jar`
 2. 只需要 Create；Aeronautics / Simulated 可选
