@@ -24,6 +24,7 @@ $classpath = @(
     $srgJar.FullName,
     (Join-Path $libraryRoot 'net\neoforged\neoforge\21.1.262\neoforge-21.1.262-universal.jar'),
     (Join-Path $libraryRoot 'net\neoforged\fancymodloader\loader\4.0.45\loader-4.0.45.jar'),
+    (Join-Path $libraryRoot 'net\neoforged\bus\8.0.5\bus-8.0.5.jar'),
     (Join-Path $libraryRoot 'net\neoforged\mergetool\2.0.3\mergetool-2.0.3-api.jar'),
     (Join-Path $libraryRoot 'net\fabricmc\sponge-mixin\0.16.4+mixin.0.8.7\sponge-mixin-0.16.4+mixin.0.8.7.jar'),
     (Join-Path $libraryRoot 'org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar')

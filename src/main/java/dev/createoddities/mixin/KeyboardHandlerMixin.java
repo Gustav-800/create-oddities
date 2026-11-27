@@ -1,6 +1,6 @@
 package dev.createoddities.mixin;
 
-import dev.createoddities.CreateOdditiesClient;
+import dev.createoddities.module.typewriter.TypewriterKeyguard;
 import net.minecraft.client.KeyboardHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,12 +30,12 @@ public abstract class KeyboardHandlerMixin {
             int modifiers,
             CallbackInfo ci
     ) {
-        if (CreateOdditiesClient.handleFullscreenKey(windowHandle, key, action)) {
+        if (TypewriterKeyguard.handleFullscreenKey(windowHandle, key, action)) {
             ci.cancel();
             return;
         }
-        if (CreateOdditiesClient.shouldCapture(windowHandle, key)) {
-            CreateOdditiesClient.forwardToTypewriter(key, scanCode, action, modifiers);
+        if (TypewriterKeyguard.shouldCapture(windowHandle, key)) {
+            TypewriterKeyguard.forwardToTypewriter(key, scanCode, action, modifiers);
             ci.cancel();
         }
     }
