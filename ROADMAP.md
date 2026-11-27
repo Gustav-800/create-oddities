@@ -24,7 +24,7 @@
 | ID | 类型 | 功能 | 可选联动 | 目标 | 状态 | 风险 / 备注 |
 | --- | --- | --- | --- | --- | --- | --- |
 | T1 | 修复 | 打字机按键保护 | Create: Aeronautics / Simulated | 0.1.2 | ✅ | 已发布；68 个可绑定键之外放行，F3 组合键可用 |
-| C1 | 修复 | CCA 线缆无法用 Create NBT 蓝图打印 | Create: Crafts & Additions | 0.2.0 | 🟡 | 原型 `create-cable-guard`，需并入并改为可选依赖 |
+| C1 | 修复 | CCA 线缆无法用 Create NBT 蓝图打印 | Create: Crafts & Additions | 0.2.1 | 🟡 | 原型 `create-cable-guard`，需并入并改为可选依赖 |
 | C2 | 调整 | 禁用 CBCAT 对 CBC 火炮内弹道学的修改 | CBC + CBCAT | 0.2.0 | ⬜ | 配置开关；默认保持原行为 |
 | A1 | 拓展 | Aeronautics 速度传感器支持 km/h、节等单位 | Create: Aeronautics | 0.2.0 | ⬜ | 纯显示/配置，不改变实际速度值 |
 | R1 | 调整 | 直行铁轨增加更多朝向 | 无 | 0.2.1 | ⬜ | 低风险；需要处理铁轨连接和碰撞形状 |
@@ -58,12 +58,12 @@
 - 模块加载器：每个功能独立注册、独立开关
 - 配置系统：模块开关 + 参数，兼容 Create 配置菜单（若 Create 无稳定公开 API，则退回 `ModConfigSpec`）
 - 迁移打字机模块（T1）
-- CCA 线缆蓝图修复并入（C1）
 - CBCAT 内弹道开关（C2）
 - Aeronautics 速度单位（A1）
 
-### 0.2.1 — Create 小修
+### 0.2.1 — Create 修复与小修
 
+- CCA 线缆蓝图修复并入（C1）
 - 直行铁轨更多朝向（R1）
 - 传动杆穿过栅栏和栏杆（R2）
 
