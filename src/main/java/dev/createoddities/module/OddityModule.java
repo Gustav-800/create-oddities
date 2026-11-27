@@ -19,4 +19,13 @@ public interface OddityModule {
 
     /** Called once after config load, on the client thread. */
     void initialize();
+
+    /**
+     * Content modules register items/blocks/recipes. Registry entries cannot be
+     * unregistered at runtime, so their enabled state is frozen at world load
+     * and config changes take effect only after leaving and re-entering a world.
+     */
+    default boolean requiresWorldReload() {
+        return false;
+    }
 }

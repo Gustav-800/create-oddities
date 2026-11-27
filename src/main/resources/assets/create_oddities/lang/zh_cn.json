@@ -1,0 +1,16 @@
+{
+  "create_oddities.config.enabled": "启用",
+  "create_oddities.config.modules.typewriter_keyguard": "打字机按键保护",
+  "create_oddities.config.modules.typewriter_keyguard.enabled": "启用打字机按键保护",
+  "create_oddities.config.modules.speed_display": "速度单位显示",
+  "create_oddities.config.modules.speed_display.enabled": "启用速度单位显示",
+  "create_oddities.config.modules.speed_display.default_unit": "默认速度单位",
+  "create_oddities.config.modules.speed_display.unit.METERS_PER_SECOND": "米/秒 (m/s)",
+  "create_oddities.config.modules.speed_display.unit.KILOMETERS_PER_HOUR": "千米/时 (km/h)",
+  "create_oddities.config.modules.speed_display.unit.KNOTS": "节 (kn)",
+  "create_oddities.velocity_sensor.unit": "速度单位",
+  "create_oddities.velocity_sensor.unit.row": "单位",
+  "create_oddities.unit.meters_per_second": "米/秒",
+  "create_oddities.unit.kilometers_per_hour": "千米/时",
+  "create_oddities.unit.knots": "节"
+}

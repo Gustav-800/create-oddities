@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.createoddities.mixin.config",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ConfigLabelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

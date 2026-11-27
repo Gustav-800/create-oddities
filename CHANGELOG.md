@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.2.0 — 2026-11-28
+
+### Added
+
+- Module framework: each feature is an `OddityModule` with availability, enable/disable and initialization checks.
+- Client config `config/create_oddities-client.toml` and server config `config/create_oddities-server.toml`.
+- Per-sensor unit selector on the Aeronautics velocity sensor: side value box opens Create's native `ValueSettingsScreen`.
+- Units: m/s, km/h and knots. The setting is stored per block entity and synced through Create's value-settings packet.
+- Speed-display conversion covers the max-speed value box, the display-link output and the Cyber Goggles tooltip.
+- Max-speed setting limits are unit-specific: 50 m/s, 180 km/h, 100 kn; the slider shows six equal milestones.
+- Module manager logs disabled/unavailable modules and isolates initialization failures.
+
+### Changed
+
+- Typewriter keyguard migrated into the module framework.
+- Typewriter can be disabled via `modules.typewriter_keyguard.enabled`.
+- Speed-display module is server-side data; `modules.speed_display.default_unit` only supplies the default for new sensors.
+- Speed sensor logic now runs on both sides; typewriter code remains client-only.
+
+### Notes
+
+- CCA cable blueprint fix moved to 0.2.1.
+- CBCAT already provides `disablePhysicRework` (default true); use that upstream config instead of a duplicate toggle.
+- Because the vanilla max-speed value is an integer, 100 kn (51.44 m/s) uses 51 m/s for the redstone full-scale threshold.
+- Create Oddities config-menu labels are localized through a small Catnip label Mixin; other mods' labels are untouched.
+- Content modules will freeze their enabled state at world load; the lifecycle contract is documented in `docs/MODULE-LIFECYCLE.md`.
+- This is still an early-development build; the module loader/config API may change before 1.0.0.
+
 ## 0.1.2 — 2026-11-22
 
 ### Fixed

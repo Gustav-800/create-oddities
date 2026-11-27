@@ -1,0 +1,16 @@
+{
+  "create_oddities.config.enabled": "Enabled",
+  "create_oddities.config.modules.typewriter_keyguard": "Typewriter Keyguard",
+  "create_oddities.config.modules.typewriter_keyguard.enabled": "Enable Typewriter Keyguard",
+  "create_oddities.config.modules.speed_display": "Speed Display",
+  "create_oddities.config.modules.speed_display.enabled": "Enable Speed Display",
+  "create_oddities.config.modules.speed_display.default_unit": "Default Unit",
+  "create_oddities.config.modules.speed_display.unit.METERS_PER_SECOND": "Meters per second (m/s)",
+  "create_oddities.config.modules.speed_display.unit.KILOMETERS_PER_HOUR": "Kilometers per hour (km/h)",
+  "create_oddities.config.modules.speed_display.unit.KNOTS": "Knots (kn)",
+  "create_oddities.velocity_sensor.unit": "Speed Unit",
+  "create_oddities.velocity_sensor.unit.row": "Unit",
+  "create_oddities.unit.meters_per_second": "m/s",
+  "create_oddities.unit.kilometers_per_hour": "km/h",
+  "create_oddities.unit.knots": "kn"
+}

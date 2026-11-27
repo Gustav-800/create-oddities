@@ -104,7 +104,7 @@
 
 | 版本 | 功能 | 源码/许可风险 | 处理方式 |
 | --- | --- | --- | --- |
-| 0.2.0 | C2 CBCAT 开关 | 高：CBCAT 闭源 | 黑盒 + 配置开关 + fail-open；版本不兼容就禁用 |
+| 0.2.0 | C2 CBCAT 开关 | 低：CBCAT 自带 `disablePhysicRework` | 直接使用 CBCAT 上游配置，不重复实现 |
 | 0.2.1 | C1 CCA 线缆 | 低：MIT | 参考 CableGuard 原型，保留 MIT 声明 |
 | 0.2.1 | R1/R2 Create 小修 | 低：Create 代码 MIT | 直接基于 Create 源码 |
 | 0.3.0 | V1 伪装方块 | 高：Copycats+ ARR | 独立实现，禁止复制代码/素材 |

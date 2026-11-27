@@ -1,0 +1,21 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "plugin": "dev.createoddities.mixin.AeronauticsMixinPlugin",
+  "package": "dev.createoddities.mixin.aeronautics",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VelocitySensorAddUnitBehaviourMixin",
+    "VelocitySensorMaxSpeedMixin",
+    "VelocitySensorMaxSpeedBoardMixin"
+  ],
+  "client": [
+    "VelocitySensorValueMixin",
+    "VelocitySensorDisplaySourceMixin",
+    "VelocitySensorValueBoxMixin",
+    "VelocitySensorGoggleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

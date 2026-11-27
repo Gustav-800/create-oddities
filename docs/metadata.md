@@ -1,6 +1,6 @@
 # 发布元数据 / Release metadata
 
-最后更新：2026-11-22
+最后更新：2026-11-28
 
 ## 名称 / Names
 
@@ -12,7 +12,7 @@
 | CurseForge 项目 ID | `1820521` |
 | CurseForge slug | `create-oddities` |
 | GitHub 仓库 | `create-oddities` |
-| 当前版本 | `0.1.2` |
+| 当前版本 | `0.2.0`（发布候选） |
 | 许可证 | MIT |
 | 作者 | Gustav800 |
 
@@ -20,18 +20,18 @@
 
 **English:**
 
-> A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.1.2 includes the wireless typewriter keyguard with non-bindable keys passed through and F3 combos; only Create is required.
+> A modular companion for Create: fixes, tweaks, and the occasional new machine. 0.2.0 adds a module/config framework, keeps the wireless typewriter keyguard, and adds a per-sensor unit selector for the Create: Aeronautics velocity sensor (m/s, km/h, knots) with unit-specific max-speed limits. Only Create is required.
 
 **中文：**
 
-> 机械动力及其附属的模块化补丁与扩展。0.1.2 包含无线红石打字机按键保护，68 个可绑定键之外的按键放行、F3 组合键可用；唯一硬前置为 Create。
+> 机械动力及其附属的模块化补丁与扩展。0.2.0 是模块化框架版本，包含打字机按键保护与航空学速度传感器单位选择；唯一硬前置为 Create。
 
 ## 分类与标签 / Categories & tags
 
 | 平台 | 填写 |
 | --- | --- |
 | CurseForge 分类 | `Create`、`Redstone`（项目当前分类） |
-| CurseForge 环境 | Client |
+| CurseForge 环境 | Client + Server |
 | CurseForge 加载器 | NeoForge |
 | CurseForge 游戏版本 | 1.21.1 |
 | 百科分类 | 辅助 |
@@ -45,7 +45,7 @@
 | --- | --- | --- |
 | 必需 | Create (`create`) | 机械动力本体，6.0.10+ |
 | 必需 | NeoForge 21.1.228+ | 加载器 |
-| 可选 | Create: Aeronautics / Simulated | 打字机模块需要；缺失时模块自动禁用 |
+| 可选 | Create: Aeronautics / Simulated | 打字机模块和速度传感器单位模块需要；缺失时模块自动禁用 |
 | 可选 | Create: Crafts & Additions | 后续线缆蓝图修复模块 |
 | 可选 | Create Big Cannons / CBCAT / CBCMW | 后续火炮相关模块 |
 
@@ -73,4 +73,5 @@
 | --- | --- |
 | `1.0.0` | 旧名 *Create: Every Key a Gem* / *字字珠玑* 的 legacy 发布 |
 | `0.1.1` | Create Oddities 0.1.1；CurseForge / GitHub 已发布 |
-| `0.1.2` | GitHub 与 CurseForge 均已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
+| `0.1.2` | GitHub 与 CurseForge 已发布；放行 68 个可绑定键之外的全部按键，并修正 F3 组合键 |
+| `0.2.0` | 发布候选；模块框架、双端配置、速度传感器单位与最大速度上限；SHA-256 `41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3` |

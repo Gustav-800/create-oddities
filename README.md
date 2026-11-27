@@ -31,11 +31,12 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 版本 | 状态 | 内容 |
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
+| **0.2.0** | 发布候选 | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
 | **0.1.2** | 已发布（GitHub + CurseForge） | 68 个可绑定键之外全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
 | **0.1.1** | 已发布 | 修复 F11 键码；Esc/F3/F11 放行；内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
 
-> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 与 0.1.2 均已发布；0.1.2 放行 68 个可绑定键之外的全部按键，并修正 F3 组合键。
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 与 0.1.2 均已发布；0.2.0 是发布候选，开始模块化并提供速度传感器单位选择。
 >
 > 0.1.x 起内部 mod id 改为 `create_oddities`。它和 1.0.0 的 `every_key_a_gem` 会被加载器视为两个不同模组；升级时必须先移除旧 jar，不能同时安装。
 
@@ -60,9 +61,10 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 模块 | 状态 | 前置 | 说明 |
 | --- | --- | --- | --- |
-| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.1.2 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏 |
+| **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.2.0 当前 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏；`modules.typewriter_keyguard.enabled` |
 | **Cable Blueprint Fix** | 🟡 原型 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；原型见 [create-cable-guard](https://github.com/Gustav-800/create-cable-guard) |
 | **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
+| **Speed Display** | 🟢 0.2.0 | Create + 可选 Aeronautics | 每个速度传感器可在侧面切换 m/s、km/h、节；最大速度设置上限分别为 50 / 180 / 100；显示链接和护目镜同步 |
 | **Create 调整** | ⬜ 计划 | Create；个别功能联动附属 | 铁轨朝向、传动杆穿栅栏、伪装方块、蓝图预览、动力臂 |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道、发射药、生存配方、装卸过渡 |
 | **Sable / Aeronautics 组件** | ⬜ 计划 | Create + 可选 Sable / Aeronautics | 锁链轴承、铰链/绞盘、绳索传动轮、摇杆、高度计 |
@@ -73,7 +75,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 | 版本 | 主题 | 主要内容 |
 | --- | --- | --- |
-| 0.2.0 | 模块化基础 | 模块/配置、CBCAT 内弹道开关、速度单位 |
+| 0.2.0 | 模块化基础与速度单位 | 模块/配置、打字机迁移、速度传感器单位选择；CBCAT 开关使用其上游配置 |
 | 0.2.1 | Create 修复与小修 | CCA 线缆蓝图、直行铁轨更多朝向、传动杆穿过栅栏/栏杆 |
 | 0.3.0 | Create 内容与视觉 | 伪装斜坡/机壳、蓝图等轴预览、传动动画平滑 |
 | 0.4.0 | CBC 火炮 | 自由选择发射药、半格高能发射药、装卸过渡、CBCMW 配方 |
@@ -94,16 +96,28 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 
 **1.0.0 例外**：当前已发布的打字机模块需要 Create: Aeronautics（内含 Simulated 1.3.2+）。0.1.x 已把 Simulated 改为可选。
 
+## 本地构建 / Building
+
+0.2.0 使用项目根目录的 `build.ps1` 构建（需要指向包含 Create / Aeronautics 的 `mods` 目录）。详细命令见 [docs/BUILDING.md](docs/BUILDING.md)。
+
+## 模块生命周期 / Module lifecycle
+
+新物品/方块类模块不能在运行中注销；配置修改需要退出世界再重进。详细约定见 [docs/MODULE-LIFECYCLE.md](docs/MODULE-LIFECYCLE.md)。
+
 ## 配置 / Configuration
 
-0.1.x 目标：
+0.2.0 使用两个 NeoForge 配置：
 
-- 每个模块的 `enabled` 开关；
-- 模块参数（阈值、倍率、单位、配方开关等）；
-- 与 Create 配置菜单兼容的游戏内入口；
-- 配置文件缺失或损坏时回退到安全默认值。
+- `config/create_oddities-client.toml`：打字机模块
+- `config/create_oddities-server.toml`：速度传感器单位模块
 
-**0.1.2 目前也没有配置文件。** 打字机模块在检测到 Simulated 时启用。
+| 配置项 | 默认 | 说明 |
+| --- | --- | --- |
+| `modules.typewriter_keyguard.enabled` | `true` | 打字机按键保护 |
+| `modules.speed_display.enabled` | `true` | 服务端启用速度传感器单位选择 |
+| `modules.speed_display.default_unit` | `METERS_PER_SECOND` | 新放置传感器的默认单位；可选 `KILOMETERS_PER_HOUR`、`KNOTS` |
+
+每个传感器的单位保存在方块实体 NBT 中，由侧面选择行为同步；全局配置只提供默认值。配置在游戏启动时加载，模块缺失对应附属时自动禁用。
 
 ## 安装 / Installation
 
@@ -114,11 +128,11 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 0.1.2（当前版本）
+### 0.2.0（发布候选）
 
-1. 先移除 1.0.0 的 `create-every-key-a-gem-1.0.0.jar`（内部 id 不同，不能共存）
+1. 先移除 1.0.0 的 `create-every-key-a-gem-1.0.0.jar`（内部 id 不同，不能共存）；再替换旧的 `create-oddities-0.1.x.jar`
 2. 只需要 Create；Aeronautics / Simulated 可选
-3. 把 `create-oddities-0.1.2.jar` 放进 `mods/`
+3. 把 `create-oddities-0.2.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
 ## 构建 / Building
