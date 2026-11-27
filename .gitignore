@@ -1,6 +1,7 @@
 .gradle/
 build/
 dist/
+.secrets/
 run/
 logs/
 .idea/
