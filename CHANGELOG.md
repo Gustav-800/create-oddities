@@ -4,7 +4,7 @@
 
 ### Added
 
-- C1: Create: Crafts & Additions wire nodes are preserved when printing Create blueprints.
+- Create: Crafts & Additions wire nodes are preserved when printing Create blueprints.
 - CCA wire endpoints are rotated/mirrored with the blueprint in both the deployed hologram and the printed result.
 - CCA is an optional dependency; the cable module and its mixins are skipped when it is absent.
 - Common config: `config/create_oddities-common.toml` with `modules.cable_blueprint.enabled`.
@@ -18,8 +18,8 @@
 ### Notes
 
 - 0.2.1 is a Beta build.
-- The deployed-blueprint hologram and the printed result were both verified with mirrored and rotated blueprints.
-- The shaft encasing feature needs a technical block with a block entity and runtime fence/bars rendering.
+- The deployed-blueprint hologram and the printed result support mirrored and rotated blueprints.
+- The shaft encasing feature is planned for 0.2.2. It is a technical block and does not appear in the creative inventory.
 
 ## 0.2.0 Beta — 2026-11-28
 

@@ -65,7 +65,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | --- | --- | --- | --- |
 | **Typewriter Keyguard** | ✅ 1.0.0（旧名）/ 0.2.0 当前 / 客户端 | Create + 可选 Simulated | 打字机激活时接管键盘；68 个可绑定键之外放行，F3 组合键可用，Esc 退出，F11 全屏；`modules.typewriter_keyguard.enabled` |
 | **Cable Blueprint Fix** | 🟢 0.2.1 | Create + 可选 Create: Crafts & Additions | 让 CCA 电线在 Create 蓝图打印后保留，并支持旋转/镜像；开关为 COMMON 配置 `modules.cable_blueprint.enabled` |
-| **Soft Kinetics** | 🟡 研究/原型 | Create | 把应力网络的硬过载改为连续降速；原型见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
+| **Soft Kinetics** | 🟡 研究 | Create | 把应力网络的硬过载改为连续降速；早期实验见 [create-mechanical-principles](https://github.com/Gustav-800/create-mechanical-principles) |
 | **Speed Display** | 🟢 0.2.0 / 双端 | Create + 可选 Aeronautics | 每个速度传感器可在侧面切换 m/s、km/h、节；最大速度设置上限分别为 50 / 180 / 100；显示链接和护目镜同步 |
 | **Create 调整** | ⬜ 计划 | Create；个别功能联动附属 | 铁轨朝向、传动杆穿栅栏、伪装方块、蓝图预览、动力臂 |
 | **CBC/CBCAT/CBCMW 调整** | ⬜ 计划 | Create + 对应附属 | 内弹道、发射药、生存配方、装卸过渡 |
@@ -80,7 +80,7 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | 0.2.0 | 模块化基础与速度单位 | 模块/配置、打字机迁移、速度传感器单位选择；CBCAT 开关使用其上游配置 |
 | 0.2.1 | CCA 线缆蓝图 | CCA 蓝图部署全息/打印/旋转/镜像、确定性构建、COMMON 配置收尾 |
 | 0.2.2 | 传动杆包壳与视觉 | 传动杆与栅栏/栏杆共存、图标/封面、配置标题/同步小修 |
-| 0.3.0 | 直轨 15° | 直行铁轨 15° 朝向（先技术验证） |
+| 0.3.0 | 直轨 15° | 直行铁轨 15° 朝向（研究中） |
 | 0.3.1 | Create 内容与视觉 | 伪装斜坡/机壳、蓝图等轴预览、传动动画平滑 |
 | 0.4.0 | CBC 火炮 | 自由选择发射药、半格高能发射药、装卸过渡、CBCMW 配方 |
 | 0.5.0 | Aeronautics 交互与能源 | 红石磁铁 FE、高度计转盘、鼠标摇杆 |
@@ -175,8 +175,8 @@ Gradle 构建需要能访问 `maven.neoforged.net`；如果网络不通，用 Po
 - GitHub Release v0.1.2：<https://github.com/Gustav-800/create-oddities/releases/tag/v0.1.2>
 - CurseForge：<https://www.curseforge.com/minecraft/mc-mods/create-oddities>
 - MC百科：[机械动力：奇思妙想](https://www.mcmod.cn/class/32518.html)（更名/0.1.2 审核中）
-- Cable Guard 原型：<https://github.com/Gustav-800/create-cable-guard>
-- Mechanical Principles 原型：<https://github.com/Gustav-800/create-mechanical-principles>
+- Cable Guard 早期实验：<https://github.com/Gustav-800/create-cable-guard>
+- Mechanical Principles 早期实验：<https://github.com/Gustav-800/create-mechanical-principles>
 
 ## 许可 / License
 
