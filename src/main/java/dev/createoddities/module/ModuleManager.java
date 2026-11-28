@@ -1,5 +1,6 @@
 package dev.createoddities.module;
 
+import dev.createoddities.module.cable.CableBlueprintModule;
 import dev.createoddities.module.typewriter.TypewriterModule;
 import java.util.List;
 import org.slf4j.Logger;
@@ -15,7 +16,8 @@ import org.slf4j.LoggerFactory;
 public final class ModuleManager {
     private static final Logger LOGGER = LoggerFactory.getLogger("Create Oddities");
     private static final List<OddityModule> MODULES = List.of(
-            new TypewriterModule()
+            new TypewriterModule(),
+            new CableBlueprintModule()
     );
 
     private ModuleManager() {

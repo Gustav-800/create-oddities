@@ -4,11 +4,11 @@ license = "MIT"
 
 [[mods]]
 modId = "create_oddities"
-version = "0.2.0"
+version = "0.2.1"
 displayName = "Create Oddities"
 authors = "Gustav800"
 logoFile = "icon.png"
-description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. 0.2.0 adds a module/config framework, keeps the wireless typewriter keyguard, and adds a per-sensor unit selector for the Create: Aeronautics velocity sensor (m/s, km/h, knots) with unit-specific max-speed limits. Create is required; Create: Aeronautics / Simulated is optional.'''
+description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. 0.2.1 is a Beta update that keeps the module framework, adds CCA wire support in Create blueprints, and retains the per-sensor unit selector for the Create: Aeronautics velocity sensor. Create is required; Create: Aeronautics / Simulated and Create: Crafts & Additions are optional.'''
 
 [[mixins]]
 config = "create_oddities.mixins.json"
@@ -18,6 +18,9 @@ config = "create_oddities.aeronautics.mixins.json"
 
 [[mixins]]
 config = "create_oddities.config.mixins.json"
+
+[[mixins]]
+config = "create_oddities.cable.mixins.json"
 
 [[dependencies.create_oddities]]
 modId = "neoforge"
@@ -44,5 +47,12 @@ side = "BOTH"
 modId = "simulated"
 type = "optional"
 versionRange = "[1.3.2,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.create_oddities]]
+modId = "createaddition"
+type = "optional"
+versionRange = "[1.7.2,)"
 ordering = "AFTER"
 side = "BOTH"

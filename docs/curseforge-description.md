@@ -4,16 +4,21 @@ A modular companion for Create: small fixes, careful tweaks, and the occasional 
 
 Create Oddities is an early-development addon collection for Create and its addons. Each feature is a separate module; optional integrations only activate when the relevant addon is installed.
 
-## 0.2.0 — Module framework and velocity-sensor units
+## 0.2.1 Beta — CCA blueprint support
 
-0.2.0 adds a module/config framework and a per-sensor unit selector for the Create: Aeronautics velocity sensor:
+0.2.1 adds Create: Crafts & Additions wire support to Create blueprints:
+
+- CCA wire nodes are preserved when a blueprint is printed.
+- Wire endpoints rotate and mirror with the blueprint.
+- The deployed-blueprint hologram uses the same transform, so the preview and printed result match.
+- CCA is optional; when absent, the module and its mixins are skipped.
+- Existing typewriter keyguard and velocity-sensor unit features are unchanged.
+
+0.2.0 features remain available:
 
 - Typewriter keyguard: keys bound to the wireless typewriter no longer trigger other mods' shortcuts. Keys outside the 68 bindable keys pass through; Esc exits; F11 toggles fullscreen; F3 combos work.
-- Velocity sensor units: each sensor can be switched on its side between `m/s`, `km/h` and `kn`.
-- The setting is per block entity and syncs to the max-speed value box, display links and Cyber Goggles.
-- Max-speed setting limits are unit-specific: `50 m/s`, `180 km/h`, `100 kn`; the slider shows six equal milestones.
-- Create config menu entries for Create Oddities are localized; behavior modules can be enabled/disabled from the native config screen.
-- Speed sensor logic is server-side data; the typewriter remains client-only.
+- Velocity sensor units: each sensor can be switched on its side between `m/s`, `km/h` and `kn`; the setting syncs to the max-speed value box, display links and goggles.
+- Unit-specific max-speed limits: `50 m/s`, `180 km/h`, `100 kn`, with six equal milestones.
 
 ## Requirements
 
@@ -21,28 +26,32 @@ Create Oddities is an early-development addon collection for Create and its addo
 | --- | --- |
 | Minecraft | 1.21.1 |
 | NeoForge | 21.1.228 or newer |
+| Java | 21 |
 | Create | 6.0.10 or newer |
 | Create: Aeronautics / Simulated | Optional |
+| Create: Crafts & Additions | Optional |
 | Side | Client + Server |
 
-Only Create is required. Without Create: Aeronautics / Simulated, the typewriter and velocity-sensor modules disable themselves and the rest of the game continues normally.
+Only Create is required. Optional modules disable themselves when their addon is absent.
 
 ## Config
 
 - `config/create_oddities-client.toml`
   - `modules.typewriter_keyguard.enabled`
+- `config/create_oddities-common.toml`
+  - `modules.cable_blueprint.enabled`
 - `config/create_oddities-server.toml`
   - `modules.speed_display.enabled`
-  - `modules.speed_display.default_unit` (default for newly placed sensors)
+  - `modules.speed_display.default_unit`
 
-Existing sensors keep their own stored unit; changing the default does not rewrite them.
+The cable module uses COMMON config so the deployed-blueprint preview and the printed result use the same switch.
 
 ## Notes
 
-- CCA cable blueprint compatibility is planned for 0.2.1.
-- CBCAT already provides `disablePhysicRework` (default true); use that upstream setting.
-- The max-speed setting is a full-scale redstone threshold, not the sensor's measurement range.
-- Content modules that add registry entries always register their content; their toggle takes effect after re-entering a world.
+- 0.2.1 is a Beta build.
+- Existing sensors keep their own stored unit; changing the server default does not rewrite them.
+- Because the vanilla max-speed value is an integer, 100 kn (51.44 m/s) uses 51 m/s for the redstone full-scale threshold.
+- The shaft/fence encasing module is planned for 0.3.0 as a technical block without an item.
 
 ## Links
 

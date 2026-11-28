@@ -1,5 +1,6 @@
 package dev.createoddities;
 
+import dev.createoddities.config.OdditiesCommonConfig;
 import dev.createoddities.config.OdditiesConfig;
 import dev.createoddities.config.OdditiesServerConfig;
 import dev.createoddities.module.ModuleManager;
@@ -22,6 +23,7 @@ public final class CreateOddities {
     public static final String MODID = "create_oddities";
 
     public CreateOddities(ModContainer modContainer, IEventBus modEventBus) {
+        modContainer.registerConfig(ModConfig.Type.COMMON, OdditiesCommonConfig.SPEC);
         modContainer.registerConfig(ModConfig.Type.SERVER, OdditiesServerConfig.SPEC);
         if (FMLEnvironment.dist.isClient()) {
             modContainer.registerConfig(ModConfig.Type.CLIENT, OdditiesConfig.SPEC);

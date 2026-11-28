@@ -1,0 +1,20 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "plugin": "dev.createoddities.mixin.CableMixinPlugin",
+  "package": "dev.createoddities.mixin.cable",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CableBlockHelperMixin",
+    "CableSchematicannonMixin",
+    "CableSchematicPrinterMixin",
+    "CableWireGraphMixin"
+  ],
+  "client": [
+    "CableSchematicHandlerMixin",
+    "CableStructureTransformMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

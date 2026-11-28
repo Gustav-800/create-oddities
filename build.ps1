@@ -9,7 +9,7 @@ $root = $PSScriptRoot
 $buildDir = Join-Path $root 'build'
 $classesDir = Join-Path $buildDir 'classes'
 $libsDir = Join-Path $buildDir 'libs'
-$jarName = 'create-oddities-0.2.0.jar'
+$jarName = 'create-oddities-0.2.1.jar'
 $jarPath = Join-Path $libsDir $jarName
 
 $javac = Join-Path $JavaHome 'bin\javac.exe'
@@ -84,11 +84,11 @@ $manifest = Join-Path $buildDir 'MANIFEST.MF'
 @(
     'Manifest-Version: 1.0',
     'Implementation-Title: Create Oddities',
-    'Implementation-Version: 0.2.0'
+    'Implementation-Version: 0.2.1'
 ) | Set-Content -Path $manifest -Encoding ASCII
 
 if (Test-Path $jarPath) { Remove-Item $jarPath -Force }
-& $jarTool --create --file $jarPath --manifest $manifest -C $classesDir .
+& $jarTool --create --file $jarPath --manifest $manifest --date=2026-01-01T00:00:00Z -C $classesDir .
 if ($LASTEXITCODE -ne 0) { throw "jar failed with exit code $LASTEXITCODE" }
 
 $distDir = Join-Path $root 'dist'
