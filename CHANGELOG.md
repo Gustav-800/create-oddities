@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.1 Beta — 2026-11-28
+## 0.2.1 — 2026-11-28
 
 ### Added
 
@@ -17,11 +17,11 @@
 
 ### Notes
 
-- 0.2.1 is a Beta build.
+- 0.2.x is an early-development version.
 - The deployed-blueprint hologram and the printed result support mirrored and rotated blueprints.
 - The shaft encasing feature is planned for 0.2.2. It is a technical block and does not appear in the creative inventory.
 
-## 0.2.0 Beta — 2026-11-28
+## 0.2.0 — 2026-11-28
 
 ### Added
 

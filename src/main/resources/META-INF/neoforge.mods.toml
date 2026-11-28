@@ -8,7 +8,7 @@ version = "0.2.1"
 displayName = "Create Oddities"
 authors = "Gustav800"
 logoFile = "icon.png"
-description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. 0.2.1 is a Beta update that keeps the module framework, adds CCA wire support in Create blueprints, and retains the per-sensor unit selector for the Create: Aeronautics velocity sensor. Create is required; Create: Aeronautics / Simulated and Create: Crafts & Additions are optional.'''
+description = '''Create Oddities is a modular collection of fixes, tweaks and additions for Create and its addons. 0.2.1 is an update that keeps the module framework, adds CCA wire support in Create blueprints, and retains the per-sensor unit selector for the Create: Aeronautics velocity sensor. Create is required; Create: Aeronautics / Simulated and Create: Crafts & Additions are optional.'''
 
 [[mixins]]
 config = "create_oddities.mixins.json"

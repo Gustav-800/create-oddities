@@ -4,7 +4,7 @@ A modular companion for Create: small fixes, careful tweaks, and the occasional 
 
 Create Oddities is an early-development addon collection for Create and its addons. Each feature is a separate module; optional integrations only activate when the relevant addon is installed.
 
-## 0.2.1 Beta — CCA blueprint support
+## 0.2.1 — CCA blueprint support
 
 0.2.1 adds Create: Crafts & Additions wire support to Create blueprints:
 
@@ -48,7 +48,7 @@ The cable module uses COMMON config so the deployed-blueprint preview and the pr
 
 ## Notes
 
-- 0.2.1 is a Beta build.
+- 0.2.x is an early-development release.
 - Existing sensors keep their own stored unit; changing the server default does not rewrite them.
 - Because the vanilla max-speed value is an integer, 100 kn (51.44 m/s) uses 51 m/s for the redstone full-scale threshold.
 - The shaft/fence encasing module is planned for 0.3.0 as a technical block without an item.

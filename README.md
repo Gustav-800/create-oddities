@@ -32,13 +32,13 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
 | **0.2.2** | 规划中 | 传动杆包壳栅栏/栏杆、图标/封面、配置小修 |
-| **0.2.1** | Beta（GitHub Pre-release；CurseForge 已上传/审核中） | C1 CCA 线缆蓝图、确定性构建、COMMON 配置收尾 |
-| **0.2.0** | Beta（GitHub Pre-release；CurseForge Beta/审核中） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
+| **0.2.1** | 已发布（GitHub Release；CurseForge Release） | C1 CCA 线缆蓝图、确定性构建、COMMON 配置收尾 |
+| **0.2.0** | 已发布（GitHub Release；CurseForge Release） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
 | **0.1.2** | 已发布（GitHub + CurseForge） | 68 个可绑定键之外全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
 | **0.1.1** | 已发布 | 修复 F11 键码；Esc/F3/F11 放行；内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
 
-> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 与 0.1.2 均已发布；0.2.0 已在 GitHub 发布，并已上传 CurseForge Beta（审核中），开始模块化并提供速度传感器单位选择。
+> **重要**：1.0.0 的 jar 仍然是旧名字、旧依赖（需要 Simulated）。它不是完整的 Create Oddities。0.1.1 与 0.1.2 均已发布；0.2.0 和 0.2.1 已在 GitHub 发布，并已上传 CurseForge，开始模块化并提供速度传感器单位选择。
 >
 > 0.1.x 起内部 mod id 改为 `create_oddities`。它和 1.0.0 的 `every_key_a_gem` 会被加载器视为两个不同模组；升级时必须先移除旧 jar，不能同时安装。
 
@@ -133,14 +133,14 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 3. 把 `create-every-key-a-gem-1.0.0.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 0.2.1（Beta / Pre-release）
+### 0.2.1（Release）
 
 1. 先移除旧版 `create-oddities-0.1.x.jar` / `0.2.0`
 2. 需要 Create；Aeronautics、CCA 可选
 3. 把 `create-oddities-0.2.1.jar` 放进 `mods/`
 4. 完全重启游戏
 
-### 0.2.0（Beta / Pre-release）
+### 0.2.0（Release）
 
 1. 先移除 1.0.0 的 `create-every-key-a-gem-1.0.0.jar`（内部 id 不同，不能共存）；再替换旧的 `create-oddities-0.1.x.jar`
 2. 只需要 Create；Aeronautics / Simulated、Create: Crafts & Additions 可选
