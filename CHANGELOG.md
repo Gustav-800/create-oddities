@@ -13,13 +13,13 @@
 
 - The cable module uses COMMON config so client preview and server printing use the same switch.
 - `build.ps1` now writes a fixed jar timestamp; repeated builds of the same sources produce the same SHA-256.
-- R2 (shaft encasing fences/railings) is moved to 0.3.0 as a content module.
+- The shaft encasing fences/railings feature is planned for 0.2.2 as a content module.
 
 ### Notes
 
 - 0.2.1 is a Beta build.
 - The deployed-blueprint hologram and the printed result were both verified with mirrored and rotated blueprints.
-- R2 needs a technical block with a block entity and runtime fence/bars rendering; it is not a 0.2.x patch.
+- The shaft encasing feature needs a technical block with a block entity and runtime fence/bars rendering.
 
 ## 0.2.0 Beta — 2026-11-28
 
