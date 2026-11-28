@@ -21,6 +21,16 @@
 build/libs/create-oddities-0.2.0.jar
 ```
 
+## 发布哈希
+
+0.2.0 的正式发布 jar SHA-256：
+
+```
+41757D282DC97505252C32B65E04E39B4DB5E8BFB61A9EBA52481F343D34A2C3
+```
+
+当前 `build.ps1` 使用 JDK `jar`，条目时间戳会导致相同源码重复构建出不同 SHA-256。上传或校验时请使用 `dist/` 中已发布的那一份；确定性构建留到后续版本处理。
+
 ## Gradle 说明
 
 当前 `build.gradle` 只配置了 NeoForge，没有声明 Create / Ponder / Simulated 的编译依赖。发布构建请使用上面的 `build.ps1`；Gradle 仅用于 IDE 基础导入。
