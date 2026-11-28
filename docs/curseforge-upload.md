@@ -87,7 +87,7 @@ CurseForge 的编辑器是富文本：
 | --- | --- |
 | File | `build\libs\create-oddities-0.1.2.jar` |
 | Display name | `Create Oddities 0.1.2` |
-| Release type | `Release`（0.x 版本号本身表示开发阶段） |
+| Release type | `Beta`（0.x 早期开发阶段） |
 | Game version | `1.21.1` |
 | Mod loader | `NeoForge` |
 | Environment | `Client` |

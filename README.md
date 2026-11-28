@@ -32,8 +32,8 @@ Create Oddities 是面向 **Create 本体及其附属** 的模块化补丁集合
 | --- | --- | --- |
 | **1.0.0** | 已发布（旧名 *Create: Every Key a Gem* / *机械动力：字字珠玑*） | 打字机按键保护。客户端模组，需要 Simulated |
 | **0.2.2** | 规划中 | 传动杆包壳栅栏/栏杆、图标/封面、配置小修 |
-| **0.2.1** | 已发布（GitHub Release；CurseForge Release） | C1 CCA 线缆蓝图、确定性构建、COMMON 配置收尾 |
-| **0.2.0** | 已发布（GitHub Release；CurseForge Release） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
+| **0.2.1** | 已发布（GitHub Release；CurseForge Beta） | C1 CCA 线缆蓝图、确定性构建、COMMON 配置收尾 |
+| **0.2.0** | 已发布（GitHub Release；CurseForge Beta） | 模块加载器、双端配置、打字机迁移、速度传感器单位选择；CBCAT 使用其自带开关 |
 | **0.1.2** | 已发布（GitHub + CurseForge） | 68 个可绑定键之外全部放行；F3 组合键可用；Esc 退出；F11 全屏；仅 Create 前置，Simulated 可选 |
 | **0.1.1** | 已发布 | 修复 F11 键码；Esc/F3/F11 放行；内部 id `create_oddities`、仅 Create 前置、Simulated 可选 |
 | **0.1.0** | 早期开发版 | 首个 Create Oddities 构建：更名、内部 id 迁移、依赖调整 |
