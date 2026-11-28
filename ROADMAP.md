@@ -9,7 +9,7 @@
 - ⬜ 计划
 - ❓ 需要研究
 
-> 0.1.2 已发布；0.2.0 已在 GitHub 发布，并已上传 CurseForge（Beta）；0.2.1 已上传 CurseForge Beta（审核中）。0.x 阶段允许调整配置和行为，1.0.0 之后再保证稳定。
+> 0.1.2 已发布；0.2.0 已在 GitHub 发布，并已上传 CurseForge（Beta）；0.2.1 已在 GitHub Pre-release 发布，并上传 CurseForge Beta（审核中）。0.x 阶段允许调整配置和行为，1.0.0 之后再保证稳定。
 
 ## 分配原则
 
